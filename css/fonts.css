@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'BWI';
+    src: url('../fonts/BWIItalic.eot');
+    src: url('../fonts/BWIItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BWIItalic.woff2') format('woff2'),
+        url('../fonts/BWIItalic.woff') format('woff'),
+        url('../fonts/BWIItalic.ttf') format('truetype'),
+        url('../fonts/BWIItalic.svg#BWIItalic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BWI';
+    src: url('../fonts/BWIBold.eot');
+    src: url('../fonts/BWIBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BWIBold.woff2') format('woff2'),
+        url('../fonts/BWIBold.woff') format('woff'),
+        url('../fonts/BWIBold.ttf') format('truetype'),
+        url('../fonts/BWIBold.svg#BWIBold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BWI';
+    src: url('../fonts/BWIThin.eot');
+    src: url('../fonts/BWIThin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BWIThin.woff2') format('woff2'),
+        url('../fonts/BWIThin.woff') format('woff'),
+        url('../fonts/BWIThin.ttf') format('truetype'),
+        url('../fonts/BWIThin.svg#BWIThin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BWI';
+    src: url('../fonts/BWI-Light.eot');
+    src: url('../fonts/BWI-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BWI-Light.woff2') format('woff2'),
+        url('../fonts/BWI-Light.woff') format('woff'),
+        url('../fonts/BWI-Light.ttf') format('truetype'),
+        url('../fonts/BWI-Light.svg#BWI-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BWI';
+    src: url('../fonts/BWIMedium.eot');
+    src: url('../fonts/BWIMedium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BWIMedium.woff2') format('woff2'),
+        url('../fonts/BWIMedium.woff') format('woff'),
+        url('../fonts/BWIMedium.ttf') format('truetype'),
+        url('../fonts/BWIMedium.svg#BWIMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BWI';
+    src: url('../fonts/BWISemibold.eot');
+    src: url('../fonts/BWISemibold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BWISemibold.woff2') format('woff2'),
+        url('../fonts/BWISemibold.woff') format('woff'),
+        url('../fonts/BWISemibold.ttf') format('truetype'),
+        url('../fonts/BWISemibold.svg#BWISemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BWI';
+    src: url('../fonts/BWI-Regular.eot');
+    src: url('../fonts/BWI-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/BWI-Regular.woff2') format('woff2'),
+        url('../fonts/BWI-Regular.woff') format('woff'),
+        url('../fonts/BWI-Regular.ttf') format('truetype'),
+        url('../fonts/BWI-Regular.svg#BWI-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('../fonts/AktivGrotesk-Regular.eot');
+    src: url('../fonts/AktivGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AktivGrotesk-Regular.woff2') format('woff2'),
+        url('../fonts/AktivGrotesk-Regular.woff') format('woff'),
+        url('../fonts/AktivGrotesk-Regular.ttf') format('truetype'),
+        url('../fonts/AktivGrotesk-Regular.svg#AktivGrotesk-Regular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('../fonts/AktivGrotesk-Bold.eot');
+    src: url('../fonts/AktivGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AktivGrotesk-Bold.woff2') format('woff2'),
+        url('../fonts/AktivGrotesk-Bold.woff') format('woff'),
+        url('../fonts/AktivGrotesk-Bold.ttf') format('truetype'),
+        url('../fonts/AktivGrotesk-Bold.svg#AktivGrotesk-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('../fonts/AktivGrotesk-Medium.eot');
+    src: url('../fonts/AktivGrotesk-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/AktivGrotesk-Medium.woff2') format('woff2'),
+        url('../fonts/AktivGrotesk-Medium.woff') format('woff'),
+        url('../fonts/AktivGrotesk-Medium.ttf') format('truetype'),
+        url('../fonts/AktivGrotesk-Medium.svg#AktivGrotesk-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}

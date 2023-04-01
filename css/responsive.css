@@ -1,0 +1,169 @@
+@media screen and (max-width: 1199px){
+		
+}
+
+@media screen and (max-width: 991px){
+	:root{
+		--16: 14px;
+		--38: 32px;
+		--32: 28px;
+	}
+
+	.py-100{
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
+
+	.py-85{
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+
+	.navbar-brand img {
+		max-width: 110px;
+	}
+	.navbar-nav li + li {
+		margin-left: 8px;
+	}
+
+	.navbar, .navbar-dashboard{
+		padding-top: 11.5px;
+		padding-bottom: 11.5px;
+	}
+
+	.page-web{
+		padding-top: 55px;
+	}
+	.time-cells{
+		white-space: nowrap;
+	}
+	.owl-card-img{
+		height: 125px;
+	}
+}
+
+@media screen and (max-width: 767px){
+	.mb-28{
+		margin-bottom: 16px;
+	}
+	.py-100{
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.py-85{
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+	.py-40{
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+	.page-web{
+		padding-top: 55px;
+	}
+	.page-dash{
+		padding-top: 80px;
+	}
+	.navbar-nav li + li{
+		margin-left: 0;
+	}
+	.navbar-nav li{
+		position: relative;
+	}
+	.navbar-collapse{
+		transition: all 0.35s ease-out;
+		background: var(--white);
+		min-height: 100%;
+		max-width: 280px;
+		position: fixed;
+		padding: 0 15px;
+		border: none;
+		left: -280px;
+		width: 100%;
+		bottom: 0;
+		top: 55px;
+	}
+	.navbar-collapse.show{
+		left: 0;
+	}
+	.navbar-nav li:after{
+		background-color: var(--dark);
+		transition: all 0.35s linear;
+		position: absolute;
+		right: -15px;
+		content: "";
+		left: -15px;
+		height: 1px;
+		bottom: 0;
+	}
+	.time-cells .btn{
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.mb-40 {
+		margin-bottom: 28px;
+	}
+	.page-web, .page-dash{
+		min-height: auto;
+	}
+	.navbar-dashboard{
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 99;
+		position: fixed;
+		background-color: var(--white);
+	}
+	.navbar-dashboard-control a:not(:first-child) {
+		margin-left: 10px;
+	}
+	.navigation-menu{
+		background-color: var(--white);
+		transition: all 0.35s linear;
+		max-width: 240px;
+		position: fixed;
+		overflow: auto;
+		left: -250px;
+		z-index: 98;
+		width: 85%;
+		top: 55px;
+		bottom: 0;
+	}
+	.navigation-menu ul{
+		flex-direction: column;
+	}
+	.navigation-menu ul li + li {
+		margin-left: 0px;
+		margin-top: 20px;
+	}
+	.navigation-menu.show{
+		left: 0;
+	}
+	.owl-card-post small{
+		font-size: 11px;
+	}
+}
+
+@media screen and (max-width: 575px){
+	:root{
+		--38 : 28px;
+		--32 : 25px;
+		--16 : 13px;
+	}
+
+	.ls-3{
+		letter-spacing: 2px;
+	}
+
+	.nav-pills li{
+		margin:0 4px;
+	}
+	.owl-cards{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.owl-nav button{
+		width: 26px;
+		height: 26px;
+	}
+}

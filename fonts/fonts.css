@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'BWI';
+    src: url('./BWIItalic.eot');
+    src: url('./BWIItalic.eot?#iefix') format('embedded-opentype'),
+        url('./BWIItalic.woff2') format('woff2'),
+        url('./BWIItalic.woff') format('woff'),
+        url('./BWIItalic.ttf') format('truetype'),
+        url('./BWIItalic.svg#BWIItalic') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BWI';
+    src: url('./BWIBold.eot');
+    src: url('./BWIBold.eot?#iefix') format('embedded-opentype'),
+        url('./BWIBold.woff2') format('woff2'),
+        url('./BWIBold.woff') format('woff'),
+        url('./BWIBold.ttf') format('truetype'),
+        url('./BWIBold.svg#BWIBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BWI';
+    src: url('./BWIThin.eot');
+    src: url('./BWIThin.eot?#iefix') format('embedded-opentype'),
+        url('./BWIThin.woff2') format('woff2'),
+        url('./BWIThin.woff') format('woff'),
+        url('./BWIThin.ttf') format('truetype'),
+        url('./BWIThin.svg#BWIThin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BWI';
+    src: url('./BWI-Light.eot');
+    src: url('./BWI-Light.eot?#iefix') format('embedded-opentype'),
+        url('./BWI-Light.woff2') format('woff2'),
+        url('./BWI-Light.woff') format('woff'),
+        url('./BWI-Light.ttf') format('truetype'),
+        url('./BWI-Light.svg#BWI-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BWI';
+    src: url('./BWIMedium.eot');
+    src: url('./BWIMedium.eot?#iefix') format('embedded-opentype'),
+        url('./BWIMedium.woff2') format('woff2'),
+        url('./BWIMedium.woff') format('woff'),
+        url('./BWIMedium.ttf') format('truetype'),
+        url('./BWIMedium.svg#BWIMedium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BWI';
+    src: url('./BWISemibold.eot');
+    src: url('./BWISemibold.eot?#iefix') format('embedded-opentype'),
+        url('./BWISemibold.woff2') format('woff2'),
+        url('./BWISemibold.woff') format('woff'),
+        url('./BWISemibold.ttf') format('truetype'),
+        url('./BWISemibold.svg#BWISemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'BWI';
+    src: url('./BWI-Regular.eot');
+    src: url('./BWI-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./BWI-Regular.woff2') format('woff2'),
+        url('./BWI-Regular.woff') format('woff'),
+        url('./BWI-Regular.ttf') format('truetype'),
+        url('./BWI-Regular.svg#BWI-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('./AktivGrotesk-Regular.eot');
+    src: url('./AktivGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+        url('./AktivGrotesk-Regular.woff2') format('woff2'),
+        url('./AktivGrotesk-Regular.woff') format('woff'),
+        url('./AktivGrotesk-Regular.ttf') format('truetype'),
+        url('./AktivGrotesk-Regular.svg#AktivGrotesk-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('./AktivGrotesk-Bold.eot');
+    src: url('./AktivGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+        url('./AktivGrotesk-Bold.woff2') format('woff2'),
+        url('./AktivGrotesk-Bold.woff') format('woff'),
+        url('./AktivGrotesk-Bold.ttf') format('truetype'),
+        url('./AktivGrotesk-Bold.svg#AktivGrotesk-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Aktiv Grotesk';
+    src: url('./AktivGrotesk-Medium.eot');
+    src: url('./AktivGrotesk-Medium.eot?#iefix') format('embedded-opentype'),
+        url('./AktivGrotesk-Medium.woff2') format('woff2'),
+        url('./AktivGrotesk-Medium.woff') format('woff'),
+        url('./AktivGrotesk-Medium.ttf') format('truetype'),
+        url('./AktivGrotesk-Medium.svg#AktivGrotesk-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
