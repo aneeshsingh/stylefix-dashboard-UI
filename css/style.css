@@ -6,6 +6,7 @@
 
 	--btnGrad: linear-gradient(360deg, #E4B781 0%, #C19A6B 100%);
 	--btnGradHover: linear-gradient(360deg, #C19A6B 0%, #E4B781 100%);
+	--bgGrad: linear-gradient(360deg, rgba(228, 183, 129, 0.2) 0%, rgba(193, 154, 107, 0.2) 100%);
 	--bgCard: #f3ebe2;
 
 	--11: 11px;
@@ -844,6 +845,7 @@ label.error{
 	margin-bottom: 0;
 	max-width: 75px;
 	max-width: auto;
+	cursor: pointer;
 	width: 95%;
 }
 .item-circle strong{
@@ -856,9 +858,23 @@ label.error{
 	height: 75px;
 	padding: 4px;
 	display: flex;
+	position: relative;
 	border-radius: 50%;
 	background: var(--white);
 	transition: all 0.15s ease;
+}
+.item-span:before{
+	font-family: "Font Awesome 6 Free";
+	border-radius: 50px;
+	color: var(--red);
+	position: absolute;
+	visibility: hidden;
+	content: "\f057";
+	line-height: 1.35;
+	opacity: 0;
+	z-index: 1;
+	right: -3px;
+	top: -3px;
 }
 .item-span > span{
 	width: 100%;
@@ -878,10 +894,53 @@ label.error{
 .item-circle input:checked + .item-span{
 	background: var(--btnGrad);
 }
+.item-circle input:checked + .item-span:before{
+	opacity: 1;
+	visibility: visible;
+}
 .item-circle input:checked + .item-span > span{
 	border-color: transparent;
 	background-color: var(--bgCard);
 }
 .item-circle input:checked ~ strong{
 	color: var(--gold);
+}
+
+.modal-theme .modal-header{
+	background: var(--bgGrad);
+}
+
+.table-theme table th, .table-theme table td{
+	border: 1px solid var(--gold);
+}
+.table-theme tr:nth-child(2n+1) td{
+	background-color: var(--white);
+}
+.table-theme tr:nth-child(2n+2) td, 
+.table-theme tr th{
+	background: var(--bgGrad);
+}
+
+.table th, .table td{
+	padding: 6px 5px;
+	font-size: 13px;
+}
+
+.table th{
+	font-weight: 500;
+}
+
+.table td{
+	font-weight: 400;
+}
+
+.opacity{
+	opacity: 1;
+}
+
+.upload-pic img{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	margin: 0 auto 6px;
 }

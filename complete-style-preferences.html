@@ -452,7 +452,12 @@
                                 </section>
                                 <h3>Step 5</h3>
                                 <section>
-                                    <h5 class="mb-4">What’s your dress size? <i class="fa-solid fa-circle-exclamation"></i></h5>
+                                    <h5 class="mb-4">
+                                        What’s your dress size?
+                                        <button type="button" class="btn ms-2 border-0 p-0" data-bs-toggle="modal" data-bs-target="#DressSizeModal">
+                                            <i class="fa-solid fa-circle-exclamation"></i>
+                                        </button>
+                                    </h5>
 
                                     <div class="mb-3">
                                         <div class="br-grad mb-3">
@@ -484,6 +489,112 @@
           </div>
           <!-- /.container -->
       </main>
+
+      <!-- Modal -->
+    <div class="modal modal-theme fade" id="DressSizeModal" tabindex="-1" aria-labelledby="DressSizeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header py-2 border-0 rounded-0">
+                <p class="mb-0">Size Chart</p>
+                <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-3">
+                  <div class="table-responisve text-center table-theme">
+                        <table class="table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>International</th>
+                                    <th>US Size</th>
+                                    <th>UK Size</th>
+                                    <th>EU Size</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>XXS</td>
+                                    <td>00</td>
+                                    <td>2</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>XS</td>
+                                    <td>0</td>
+                                    <td>4</td>
+                                    <td>32</td>
+                                </tr>
+                                <tr>
+                                    <td>XS</td>
+                                    <td>2</td>
+                                    <td>6</td>
+                                    <td>34</td>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>4</td>
+                                    <td>8</td>
+                                    <td>36</td>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>6</td>
+                                    <td>10</td>
+                                    <td>38</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>8</td>
+                                    <td>12</td>
+                                    <td>40</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>10</td>
+                                    <td>14</td>
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <td>L</td>
+                                    <td>12</td>
+                                    <td>16</td>
+                                    <td>44</td>
+                                </tr>
+                                <tr>
+                                    <td>L</td>
+                                    <td>14</td>
+                                    <td>18</td>
+                                    <td>46</td>
+                                </tr>
+                                <tr>
+                                    <td>XL</td>
+                                    <td>16</td>
+                                    <td>20</td>
+                                    <td>48</td>
+                                </tr>
+                                <tr>
+                                    <td>XL</td>
+                                    <td>18</td>
+                                    <td>22</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>XXL</td>
+                                    <td>20</td>
+                                    <td>24</td>
+                                    <td>52</td>
+                                </tr>
+                                <tr>
+                                    <td>XXL</td>
+                                    <td>22</td>
+                                    <td>26</td>
+                                    <td>54</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                  </div>
+              </div>
+            </div>
+        </div>
+    </div>
 
       <footer class="footer br-grad">
         <div class="pb-4 pt-5 bg-card">

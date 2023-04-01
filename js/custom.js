@@ -1,6 +1,4 @@
 $(document).ready(function() {
-    // const myModal = new bootstrap.Modal(document.getElementById('completedPopup'), options);
-
     setTimeout(() => {
         $('#completedPopup').modal('show');
     }, 2000);
@@ -91,6 +89,20 @@ $(document).ready(function() {
     $('.actions ul li').eq(1).find('a').html('<span>Next</span> <i class="fa-solid ms-2 fa-chevron-right"></i>');
     $('.actions ul li').eq(2).find('a').html('<span>Submit</span> <i class="fa-solid ms-2 fa-chevron-right"></i>');
     $('.actions ul li a').addClass('btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase');
+
+
+    // Circle Check
+    $('.item-circle .item-span').click(function(){
+        $(this).parent().toggleClass('active');
+        $(this).siblings('input').attr('disabled', false);
+        if($(this).parent().hasClass('active')){
+            if($(this).parents('section').find('input[type="checkbox"]').filter(':checked').length + 1 > 3){
+                alert('Don\'t add more then 3 items. \nPlease remove previous item first.')
+                $(this).siblings('input').attr('disabled', true);
+            }
+        }
+    })
+
 });
 
 if($('.form-validate').length > 0){
