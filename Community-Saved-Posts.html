@@ -52,9 +52,9 @@
 
       <div class="navigation-menu d-flex align-items-center justify-content-center py-40">
         <ul>
-          <li><a class="active" href="#">Dashboard</a></li>
+          <li><a href="#">Dashboard</a></li>
           <li><a href="#">Outfit Builder</a></li>
-          <li><a href="#">Community</a></li>
+          <li><a class="active" href="#">Community</a></li>
           <li><a href="#">Try On</a></li>
           <li><a href="#">Book A Stylist</a></li>
           <li><a href="#">Latest Challenges</a></li>
@@ -64,36 +64,69 @@
 
       <main class="page-dash z1">
         <div class="container">
-          <h1 class="h-line mb-0">Calendar</h1>
-          <div class="d-flex justify-content-end mb-3">
-            <div class="d-inline-flex ms-auto align-items-center page-controls">
-              <button class="btn border-0 p-0">
-                <i class="fa-solid d-block fa-magnifying-glass"></i>
-              </button>
-              <button class="btn border-0 p-0 ms-3" data-bs-toggle="modal" data-bs-target="#createEventModal">
-                <i class="fa-regular d-block fa-square-plus"></i>
-              </button>
+          <h1 class="h-line mb-28">Saved <em>Posts</em></h1>
+
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-xl-5">
+              <div class="mb-40 br-grad">
+                <div class="c_card d-flex bg-white flex-column p-md-3 p-2">
+                  <div class="d-flex mb-3 align-items-center justify-content-between">
+                      <span><img src="./images/avatar-sm-pic.png" alt="pic" class="me-2" /> janedoe</span>
+                      <span>6h ago</span>
+                  </div>
+                  <img src="./images/community-image.png" class="img-fluid w-100 mb-3" alt="community-image" />
+                  <div class="d-flex mb-3 align-items-center">
+                      <div class="d-flex me-auto align-items-center">
+                          <button class="btn p-0 border-0"><i class="fa-regular d-block fa-heart"></i></button>
+                          <button class="btn p-0 ms-3 border-0"><i class="fa-solid d-block fa-share-nodes"></i></button>
+                      </div>
+                      <button class="btn p-0 ms-3 border-0"><i class="fa-regular d-block fa-bookmark"></i></button>
+                  </div>
+                  <p class="mb-3">740 likes</p>
+                  <p><strong>janedoe Casual</strong> look for a Friday night! Black is the new orange <strong>#casual</strong>  <strong>#black</strong> <strong>#black</strong> <strong>#black</strong> <strong>#black</strong></p>
+                </div>
+              </div>
+              <!-- /.c_card -->
+              <div class="mb-40 br-grad">
+                <div class="c_card d-flex bg-white flex-column p-md-3 p-2">
+                  <div class="d-flex mb-3 align-items-center justify-content-between">
+                      <span><img src="./images/avatar-sm-pic.png" alt="pic" class="me-2" /> janedoe</span>
+                      <span>6h ago</span>
+                  </div>
+                  <img src="./images/community-image.png" class="img-fluid w-100 mb-3" alt="community-image" />
+                  <div class="d-flex mb-3 align-items-center">
+                      <div class="d-flex me-auto align-items-center">
+                          <button class="btn p-0 border-0"><i class="fa-regular d-block fa-heart"></i></button>
+                          <button class="btn p-0 ms-3 border-0"><i class="fa-solid d-block fa-share-nodes"></i></button>
+                      </div>
+                      <button class="btn p-0 ms-3 border-0"><i class="fa-regular d-block fa-bookmark"></i></button>
+                  </div>
+                  <p class="mb-3">740 likes</p>
+                  <p><strong>janedoe Casual</strong> look for a Friday night! Black is the new orange <strong>#casual</strong>  <strong>#black</strong> <strong>#black</strong> <strong>#black</strong> <strong>#black</strong></p>
+                </div>
+              </div>
+              <!-- /.c_card -->
+              <div class="mb-40 br-grad">
+                <div class="c_card d-flex bg-white flex-column p-md-3 p-2">
+                  <div class="d-flex mb-3 align-items-center justify-content-between">
+                      <span><img src="./images/avatar-sm-pic.png" alt="pic" class="me-2" /> janedoe</span>
+                      <span>6h ago</span>
+                  </div>
+                  <img src="./images/community-image.png" class="img-fluid w-100 mb-3" alt="community-image" />
+                  <div class="d-flex mb-3 align-items-center">
+                      <div class="d-flex me-auto align-items-center">
+                          <button class="btn p-0 border-0"><i class="fa-regular d-block fa-heart"></i></button>
+                          <button class="btn p-0 ms-3 border-0"><i class="fa-solid d-block fa-share-nodes"></i></button>
+                      </div>
+                      <button class="btn p-0 ms-3 border-0"><i class="fa-regular d-block fa-bookmark"></i></button>
+                  </div>
+                  <p class="mb-3">740 likes</p>
+                  <p><strong>janedoe Casual</strong> look for a Friday night! Black is the new orange <strong>#casual</strong>  <strong>#black</strong> <strong>#black</strong> <strong>#black</strong> <strong>#black</strong></p>
+                </div>
+              </div>
+              <!-- /.c_card -->
             </div>
           </div>
-
-          <div class="mb-40">
-            <img src="./images/calendar-img.png" alt="image" class="img-fluid" />
-          </div>
-          <!-- /.mb-40 -->
-
-          <div class="mb-50">
-              <h6 class="h6 mb-3">01-02-2023</h6>
-
-              <div class="mb-2 event-card">
-                <p class="d-flex"><span class="event-card-title">Office Party</span> <span>4PM</span></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. </p>
-              </div>
-              <div class="mb-2 event-card">
-                <p class="d-flex"><span class="event-card-title">Office Party</span> <span>4PM</span></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. </p>
-              </div>
-          </div>
-          <!-- /.mb-50 -->
         </div>
         <!-- /.container -->
       </main>

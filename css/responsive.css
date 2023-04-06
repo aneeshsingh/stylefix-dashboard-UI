@@ -1,10 +1,13 @@
 @media screen and (max-width: 1199px){
-		
+	.event-card{
+		padding: 12px 15px;
+	}
 }
 
 @media screen and (max-width: 991px){
 	:root{
 		--16: 14px;
+		--28: 24px;
 		--38: 32px;
 		--32: 28px;
 	}
@@ -40,9 +43,15 @@
 	.owl-card-img{
 		height: 125px;
 	}
+	.event-card-title:before{
+		top: 6px;
+	}
 }
 
 @media screen and (max-width: 767px){
+	.mb-3 {
+		margin-bottom: 0.6rem!important;
+	}
 	.mb-28{
 		margin-bottom: 16px;
 	}
@@ -148,11 +157,17 @@
 	:root{
 		--38 : 28px;
 		--32 : 25px;
+		--28 : 20px;
 		--16 : 13px;
+		--14 : 12px;
 	}
 
 	.ls-3{
 		letter-spacing: 2px;
+	}
+
+	.profile-user-left {
+		margin-right: 8%;
 	}
 
 	.nav-pills li{
@@ -165,5 +180,14 @@
 	.owl-nav button{
 		width: 26px;
 		height: 26px;
+	}
+
+	.item-span{
+		width: 65px;
+		height: 65px;
+	}
+
+	.item-circle strong{
+		font-size: 11px;
 	}
 }

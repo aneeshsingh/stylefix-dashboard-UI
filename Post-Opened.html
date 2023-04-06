@@ -52,9 +52,9 @@
 
       <div class="navigation-menu d-flex align-items-center justify-content-center py-40">
         <ul>
-          <li><a class="active" href="#">Dashboard</a></li>
+          <li><a href="#">Dashboard</a></li>
           <li><a href="#">Outfit Builder</a></li>
-          <li><a href="#">Community</a></li>
+          <li><a class="active" href="#">Community</a></li>
           <li><a href="#">Try On</a></li>
           <li><a href="#">Book A Stylist</a></li>
           <li><a href="#">Latest Challenges</a></li>
@@ -64,118 +64,32 @@
 
       <main class="page-dash z1">
         <div class="container">
-          <h1 class="h-line mb-0">Calendar</h1>
-          <div class="d-flex justify-content-end mb-3">
-            <div class="d-inline-flex ms-auto align-items-center page-controls">
-              <button class="btn border-0 p-0">
-                <i class="fa-solid d-block fa-magnifying-glass"></i>
-              </button>
-              <button class="btn border-0 p-0 ms-3" data-bs-toggle="modal" data-bs-target="#createEventModal">
-                <i class="fa-regular d-block fa-square-plus"></i>
-              </button>
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-xl-5">
+              <div class="mb-40 br-grad">
+                <div class="c_card d-flex bg-white flex-column p-md-3 p-2">
+                  <div class="d-flex mb-3 align-items-center justify-content-between">
+                      <span><img src="./images/avatar-sm-pic.png" alt="pic" class="me-2" /> janedoe</span>
+                      <span>6h ago</span>
+                  </div>
+                  <img src="./images/community-image.png" class="img-fluid w-100 mb-3" alt="community-image" />
+                  <div class="d-flex mb-3 align-items-center">
+                      <div class="d-flex me-auto align-items-center">
+                          <button class="btn p-0 border-0"><i class="fa-regular d-block fa-heart"></i></button>
+                          <button class="btn p-0 ms-3 border-0"><i class="fa-solid d-block fa-share-nodes"></i></button>
+                      </div>
+                      <button class="btn p-0 ms-3 border-0"><i class="fa-regular d-block fa-bookmark"></i></button>
+                  </div>
+                  <p class="mb-3">740 likes</p>
+                  <p><strong>janedoe Casual</strong> look for a Friday night! Black is the new orange <strong>#casual</strong>  <strong>#black</strong> <strong>#black</strong> <strong>#black</strong> <strong>#black</strong></p>
+                </div>
+              </div>
+              <!-- /.c_card -->
             </div>
           </div>
-
-          <div class="mb-40">
-            <img src="./images/calendar-img.png" alt="image" class="img-fluid" />
-          </div>
-          <!-- /.mb-40 -->
-
-          <div class="mb-50">
-              <h6 class="h6 mb-3">01-02-2023</h6>
-
-              <div class="mb-2 event-card">
-                <p class="d-flex"><span class="event-card-title">Office Party</span> <span>4PM</span></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. </p>
-              </div>
-              <div class="mb-2 event-card">
-                <p class="d-flex"><span class="event-card-title">Office Party</span> <span>4PM</span></p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. </p>
-              </div>
-          </div>
-          <!-- /.mb-50 -->
         </div>
         <!-- /.container -->
       </main>
-
-      <!-- modal -->
-      <div class="modal modal-theme fade" id="createEventModal" tabindex="-1" aria-labelledby="createEventModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content rounded-0 border-0">
-              <div class="modal-header py-2 border-0 rounded-0">
-                <p class="mb-0">Add An Event</p>
-                <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
-              </div>
-              <div class="modal-body pt-2 p-3">
-                  <form action="/">
-                    <div class="mb-2">
-                      <label>Name of the event</label>
-                      <div class="br-grad">
-                        <input type="text" class="form-control" placeholder="Title" />
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <label>Location</label>
-                      <div class="br-grad">
-                        <input type="text" class="form-control" placeholder="Location" />
-                      </div>
-                    </div>
-                    <div class="br-grad mb-2">
-                      <div class="form-check form-switch form-control m-0 ps-2 d-flex align-items-center flex-row-reverse justify-content-between">
-                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                        <label class="form-check-label mb-0" for="flexSwitchCheckChecked">All-day</label>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-6 mb-2">
-                        <label class="mb-0">Starts</label>
-                        <div class="br-grad">
-                          <input type="datetime-local" class="form-control" />
-                        </div>
-                      </div>
-                      <div class="col-6 mb-2">
-                        <label class="mb-0">Ends</label>
-                        <div class="br-grad">
-                          <input type="datetime-local" class="form-control" />
-                        </div>
-                      </div>
-                    </div>
-                    <!-- /.row -->
-                    <div class="row">
-                      <div class="col-6 mb-2">
-                        <label class="mb-0">Travel Time</label>
-                        <div class="br-grad">
-                          <select class="form-select form-control">
-                            <option value="">none</option>
-                          </select>
-                        </div>
-                      </div>
-                      <div class="col-6 mb-2">
-                        <label class="mb-0">Repeat</label>
-                        <div class="br-grad">
-                          <select class="form-select form-control">
-                            <option value="">Yes</option>
-                            <option value="">No</option>
-                            <option value="">Never</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                    <!-- /.row -->
-                    <div class="mb-3">
-                      <label>Notes</label>
-                      <div class="br-grad">
-                        <textarea class="form-control" rows="3"></textarea>
-                      </div>
-                    </div>
-                    <div class="text-end">
-                      <button type="submit" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Add An Event</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
-                    </div>
-                  </form>
-              </div>
-            </div>
-        </div>
-    </div>
 
       <footer class="footer br-grad">
         <div class="pb-4 pt-5 bg-card">

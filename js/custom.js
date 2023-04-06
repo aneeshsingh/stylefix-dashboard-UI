@@ -1,6 +1,6 @@
 $(document).ready(function() {
     setTimeout(() => {
-        $('#completedPopup').modal('show');
+        $('#completedPopup, #contactSubmitionModal').modal('show');
     }, 2000);
     
     $('.input-group-password .btn').click(function(){
@@ -55,34 +55,37 @@ $(document).ready(function() {
     }
 
     var form = $("#step-form");
-    form.validate({
-        errorPlacement: function errorPlacement(error, element) { element.before(error); },
-        // rules: {
-        //     confirm: {
-        //         equalTo: "#password"
-        //     }
-        // }
-    });
-    form.children("div").steps({
-        headerTag: "h3",
-        bodyTag: "section",
-        transitionEffect: "fade",
-        autoFocus: true,
-        onStepChanging: function (event, currentIndex, newIndex)
-        {
-            form.validate().settings.ignore = ":disabled,:hidden";
-            return form.valid();
-        },
-        onFinishing: function (event, currentIndex)
-        {
-            form.validate().settings.ignore = ":disabled";
-            return form.valid();
-        },
-        onFinished: function (event, currentIndex)
-        {
-            alert("Submitted!");
-        }
-    });
+    if(form.length > 0){
+        form.validate({
+            errorPlacement: function errorPlacement(error, element) { element.before(error); },
+            // rules: {
+            //     confirm: {
+            //         equalTo: "#password"
+            //     }
+            // }
+        });
+
+        form.children("div").steps({
+            headerTag: "h3",
+            bodyTag: "section",
+            transitionEffect: "fade",
+            autoFocus: true,
+            onStepChanging: function (event, currentIndex, newIndex)
+            {
+                form.validate().settings.ignore = ":disabled,:hidden";
+                return form.valid();
+            },
+            onFinishing: function (event, currentIndex)
+            {
+                form.validate().settings.ignore = ":disabled";
+                return form.valid();
+            },
+            onFinished: function (event, currentIndex)
+            {
+                alert("Submitted!");
+            }
+        });
+    }
 
     // prev
     $('.actions ul li').eq(0).find('a').html('<i class="fa-solid me-2 fa-chevron-left"></i> <span>Previous</span>');
@@ -92,12 +95,13 @@ $(document).ready(function() {
 
 
     // Circle Check
-    $('.item-circle .item-span').click(function(){
+    $('label.item-circle .item-span').click(function(){
         $(this).parent().toggleClass('active');
         $(this).siblings('input').attr('disabled', false);
         if($(this).parent().hasClass('active')){
             if($(this).parents('section').find('input[type="checkbox"]').filter(':checked').length + 1 > 3){
                 alert('Don\'t add more then 3 items. \nPlease remove previous item first.')
+                $(this).parent().removeClass('active');
                 $(this).siblings('input').attr('disabled', true);
             }
         }
