@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="css/owl.theme.default.min.css" rel="stylesheet" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Custom css -->
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Stylefix Dashboard</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <nav class="navbar-dashboard">
+          <div class="container d-flex align-items-center">
+            <a href="#" class="navbar-brand"><img src="./images/site-logo.svg" alt="logo" /></a>
+
+            <div class="ms-auto navbar-dashboard-control d-flex align-items-center">
+                <a href="#"><img src="./images/heart-icon.svg" alt="icon" /></a>
+                <a href="#"><img src="./images/calendar-icon.svg" alt="icon" /></a>
+                <a href="#"><img src="./images/notification-icon.svg" alt="icon" /></a>
+                <a href="#" class="username">
+                    <img src="./images/user-pic.svg" alt="icon" />
+                    <span class="d-none d-md-inline-block">janedoe</span>
+                </a>
+                <button class="btn d-md-none border-0 ms-2 btn-menu p-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                  </svg>
+
+                  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" style="display: none;" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/>
+                  </svg>
+                </button>
+            </div>
+          </div>
+      </nav>
+
+      <img src="./images/tl-circles.svg" class="tl-circle" alt="tl circles" />
+      <img src="./images/ml-circles.svg" class="ml-circle" alt="ml circles" />
+
+      <div class="navigation-menu d-flex align-items-center justify-content-center py-40">
+        <ul>
+          <li><a class="active" href="#">Dashboard</a></li>
+          <li><a href="#">Outfit Builder</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">Try On</a></li>
+          <li><a href="#">Book A Stylist</a></li>
+          <li><a href="#">Latest Challenges</a></li>
+        </ul>
+      </div>
+      <!-- /.navigation-menu -->
+
+      <main class="page-dash z1">
+        <div class="container">
+            <h1 class="h-line mb-0">Add A New <em>Outfit</em></h1>
+
+            <div class="py-40">
+                <div class="row align-items-center justify-content-around">
+                    <div class="col-md-6 col-lg-5 order-md-1 mb-md-0 mb-3">
+                        <div class="br-grad">
+                            <img src="./images/outfit-image.png" class="img-fluid" alt="hero" />
+                        </div>
+                    </div>
+                    <!-- /.col-md-6 order-md-6 -->
+                    <div class="col-md-6 col-lg-5 pe-lg-4">
+                        <form class="mb-28 form-validate" action="">
+                            <div class="mb-2">
+                                <label>Category</label>
+                                <div class="br-grad">
+                                    <select class="form-control form-select">
+                                        <option value="">Lorem ipsum</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /.mb-2 -->
+                            <div class="mb-2">
+                                <label>Brand</label>
+                                <div class="br-grad">
+                                    <input type="text" class="form-control" placeholder="Lorem ipsum" />
+                                </div>
+                            </div>
+                            <!-- /.mb-2 -->
+                            <div class="mb-2">
+                                <label>Colour</label>
+                                <div class="br-grad">
+                                    <input type="text" class="form-control" placeholder="Lorem ipsum" />
+                                </div>
+                            </div>
+                            <!-- /.mb-2 -->
+                            <div class="mb-2">
+                                <label>Size
+                                    <button type="button" class="btn ms-1 border-0 p-0" data-bs-toggle="modal" data-bs-target="#DressSizeModal">
+                                        <i class="fa-solid fa-circle-exclamation"></i>
+                                    </button>
+                                </label>
+                                <div class="br-grad">
+                                    <select class="form-control form-select">
+                                        <option value="">UK 16, Medium USA 12, Medium</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /.mb-2 -->
+                            <div class="mb-2">
+                                <label>Season</label>
+                                <div class="br-grad">
+                                    <select class="form-control form-select">
+                                        <option value="">Summer</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- /.mb-2 -->
+                            <div class="mb-3">
+                                <label>Note</label>
+                                <div class="br-grad">
+                                    <textarea rows="4" class="form-control" placeholder="Lorem ipsum"></textarea>
+                                </div>
+                            </div>
+                            <!-- /.mb-2 -->
+                            <button type="submit" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Save Outfit</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                          </form>
+                    </div>
+                    <!-- /.col-md-6 -->
+                  </div>
+                  <!-- /.row -->
+            </div>
+            <!-- /.py-40 -->
+          </div>
+          <!-- /.container -->
+      </main>
+
+      <!-- Modal -->
+      <div class="modal modal-theme fade" id="DressSizeModal" tabindex="-1" aria-labelledby="DressSizeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header py-2 border-0 rounded-0">
+                <p class="mb-0">Size Chart</p>
+                <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-3">
+                  <div class="table-responisve text-center table-theme">
+                        <table class="table mb-0">
+                            <thead>
+                                <tr>
+                                    <th>International</th>
+                                    <th>US Size</th>
+                                    <th>UK Size</th>
+                                    <th>EU Size</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>XXS</td>
+                                    <td>00</td>
+                                    <td>2</td>
+                                    <td>30</td>
+                                </tr>
+                                <tr>
+                                    <td>XS</td>
+                                    <td>0</td>
+                                    <td>4</td>
+                                    <td>32</td>
+                                </tr>
+                                <tr>
+                                    <td>XS</td>
+                                    <td>2</td>
+                                    <td>6</td>
+                                    <td>34</td>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>4</td>
+                                    <td>8</td>
+                                    <td>36</td>
+                                </tr>
+                                <tr>
+                                    <td>S</td>
+                                    <td>6</td>
+                                    <td>10</td>
+                                    <td>38</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>8</td>
+                                    <td>12</td>
+                                    <td>40</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>10</td>
+                                    <td>14</td>
+                                    <td>42</td>
+                                </tr>
+                                <tr>
+                                    <td>L</td>
+                                    <td>12</td>
+                                    <td>16</td>
+                                    <td>44</td>
+                                </tr>
+                                <tr>
+                                    <td>L</td>
+                                    <td>14</td>
+                                    <td>18</td>
+                                    <td>46</td>
+                                </tr>
+                                <tr>
+                                    <td>XL</td>
+                                    <td>16</td>
+                                    <td>20</td>
+                                    <td>48</td>
+                                </tr>
+                                <tr>
+                                    <td>XL</td>
+                                    <td>18</td>
+                                    <td>22</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>XXL</td>
+                                    <td>20</td>
+                                    <td>24</td>
+                                    <td>52</td>
+                                </tr>
+                                <tr>
+                                    <td>XXL</td>
+                                    <td>22</td>
+                                    <td>26</td>
+                                    <td>54</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <footer class="footer br-grad">
+        <div class="pb-4 pt-5 bg-card">
+          <div class="container">
+            <div class="row mb-4 justify-content-between">
+              <div class="col-md-4 mb-md-0 mb-4">
+                <img src="./images/site-logo.svg" class="img-fluid footer-logo mb-4" alt="logo" />
+                <p class="mb-4">StyleFix is dedicated to finding the right trends for each individual preference; no matter what the body type, age, or budget . </p>
+
+                <div class="socials d-flex align-items-center">
+                  <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                  <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                  <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                  <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                  <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+              </div>
+              <!-- /.col-md-4 -->
+              <div class="col-md-7">
+                <div class="row">
+                  <div class="col-md-3 col-6 mb-sm-0 mb-4">
+                    <h5 class="mb-28">Useful Links</h5>
+
+                    <ul class="list-unstyled">
+                      <li><a href="#">About</a></li>
+                      <li><a href="#">Profile</a></li>
+                      <li><a href="#">FAQs </a></li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-3 col-6 mb-sm-0 mb-4 -->
+                  <div class="col-md-3 col-6 mb-sm-0 mb-4">
+                    <h5 class="mb-28">Support</h5>
+
+                    <ul class="list-unstyled">
+                      <li><a href="#">Terms & Conditions</a></li>
+                      <li><a href="#">Privacy Policy</a></li>
+                      <li><a href="#">Contact </a></li>
+                    </ul>
+                  </div>
+                  <!-- /.col-md-3 col-6 mb-sm-0 mb-4 -->
+                  <div class="col-md-5">
+                    <h5 class="mb-28">Subscribe To Newsletter</h5>  
+
+                    <form class="mb-28" action="/">
+                      <label>Email</label>
+                      <div class="mb-3 br-grad">
+                        <input type="text" class="form-control rounded-0" placeholder="Enter your email" />
+                      </div>
+                      <button type="submit" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Subscribe</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                    </form>
+
+                    <div class="d-flex align-items-center justify-content-center">
+                      <a href="#" class="mx-2"><img src="./images/Google-Play-dark.png" class="img-fluid" alt="google pay" /></a>
+                      <a href="#" class="mx-2"><img src="./images/Apple-Store-dark.png" class="img-fluid" alt="apple store" /></a>
+                    </div>
+                  </div>
+                  <!-- /.col-md-5 -->
+                </div>
+                <!-- /.row -->
+              </div>
+              <!-- /.col-md-7 -->
+            </div>
+            <!-- /.row -->
+            <p class="text-center copyright">© StyleFix Co Pty. Ltd. 2023 | Website by <a href="https://alkye.com/" target="_blank">Alkye</a></p>
+          </div>
+          <!-- /.container -->
+        </div>
+        <!-- /.footer-content -->
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/custom.js"></script>
+  </body>
+</html>

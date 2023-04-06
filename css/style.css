@@ -1138,3 +1138,7 @@ label.item-circle .item-span:before{
 	padding-top: 6px;
 	padding-bottom: 6px;
 }
+
+.fa-heart.active{
+	color: var(--red);
+}
