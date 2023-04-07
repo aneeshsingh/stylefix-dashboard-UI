@@ -107,6 +107,26 @@ $(document).ready(function() {
         }
     })
 
+    var swiper = new Swiper(".scrollSlider", {
+        slidesPerView: "auto",
+        spaceBetween: 15,
+        mousewheel: {
+          releaseOnEdges: true,
+        },
+        scrollbar: {
+          el: ".swiper-scrollbar",
+          hide: true,
+        },
+        breakpoints:{
+            0: {
+                spaceBetween: 10,
+            },
+            1024: {
+                spaceBetween: 15
+            }
+        }
+    });
+
 });
 
 if($('.form-validate').length > 0){
