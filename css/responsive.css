@@ -1,3 +1,9 @@
+@media screen and (max-width: 1440px){
+	:root{
+		--16: 14px
+	}
+}
+
 @media screen and (max-width: 1199px){
 	.event-card{
 		padding: 12px 15px;
@@ -189,5 +195,19 @@
 
 	.item-circle strong{
 		font-size: 11px;
+	}
+
+	.sticky-top{
+		position: relative;
+	}
+
+	.shirt{
+		width: 100px;
+		height: 100px;
+	}
+
+	.pant{
+		width: 100px;
+		height: 140px;
 	}
 }

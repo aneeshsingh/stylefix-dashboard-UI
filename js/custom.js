@@ -113,10 +113,10 @@ $(document).ready(function() {
         mousewheel: {
           releaseOnEdges: true,
         },
-        scrollbar: {
-          el: ".swiper-scrollbar",
-          hide: true,
-        },
+        // scrollbar: {
+        //   el: ".swiper-scrollbar",
+        //   hide: true,
+        // },
         breakpoints:{
             0: {
                 spaceBetween: 10,
@@ -142,3 +142,258 @@ if($('.form-validate').length > 0){
         })
     });
 }
+
+
+
+const draggableElemsShirt = document.querySelectorAll(".draggable[data-id='shirt']");
+const draggableElemsPant = document.querySelectorAll(".draggable[data-id='pant']");
+
+const droppableElemsShirt = document.querySelectorAll(".droppable.shirt");
+const droppableElemsPant = document.querySelectorAll(".droppable.pant");
+
+const draggableElems = document.querySelectorAll(".draggable");
+const droppableElems = document.querySelectorAll(".droppable");
+
+// const clearData = document.getElementById("clear-data");
+
+// clearData.addEventListener("onClick", clearVal);
+
+function clearBoth(){
+    draggableElems.forEach((elem) => {
+        elem.classList.remove("dragged");
+        elem.setAttribute("draggable", "true");
+    });
+    droppableElems.forEach((elem) => {
+        elem.removeAttribute('style');
+    });
+    document.getElementById('btn-shirt').classList.remove('active');
+    document.getElementById('btn-pant').classList.remove('active');
+}
+
+function clearShirt(){
+    draggableElemsShirt.forEach((elem) => {
+        elem.classList.remove("dragged");
+        elem.setAttribute("draggable", "true");
+    });
+    droppableElemsShirt.forEach((elem) => {
+        elem.removeAttribute('style');
+    });
+    document.getElementById('btn-shirt').classList.remove('active');
+}
+
+function clearPant(){
+    draggableElemsPant.forEach((elem) => {
+        elem.classList.remove("dragged");
+        elem.setAttribute("draggable", "true");
+    });
+    droppableElemsPant.forEach((elem) => {
+        elem.removeAttribute('style');
+    });
+    document.getElementById('btn-pant').classList.remove('active');
+}
+
+draggableElems.forEach((elem) => {
+  elem.addEventListener("dragstart", dragStart);
+  // elem.addEventListener("drag", drag);
+  // elem.addEventListener("dragend", dragEnd);
+});
+
+droppableElems.forEach((elem) => {
+  elem.addEventListener("dragenter", dragEnter);
+  elem.addEventListener("dragover", dragOver);
+  elem.addEventListener("dragleave", dragLeave);
+  elem.addEventListener("drop", drop);
+});
+
+function dragStart(event) {
+  event.dataTransfer.setData("text", event.target.dataset.id);
+  event.dataTransfer.setData("src", event.target.src);
+  event.dataTransfer.setData("id", event.target.id);
+  // console.log(event.target.dataset.id)
+  // draggableElems.forEach((elem) => {
+  //   elem.classList.remove("dragged");
+  //   elem.setAttribute("draggable", "true");
+  // });
+}
+
+function dragEnter(event) {
+  event.target.classList.add("droppable-hover");
+}
+
+function dragOver(event) {
+  event.preventDefault();
+}
+
+function dragLeave(event) {
+  event.target.classList.remove("droppable-hover");
+}
+
+function drop(event) {
+  event.preventDefault();
+  // Set unique data for both elements 
+  const draggableElemDataId = event.dataTransfer.getData("id");
+  const draggableElemDataObj = event.dataTransfer.getData("src");
+  const draggableElemData = event.dataTransfer.getData("text");
+  const droppableElemData = event.target.dataset.draggableId;
+  // Check if element is positioned correctly 
+  if (draggableElemData === droppableElemData) {
+    // Get elements 
+    const droppableElem = event.target;
+    // const draggableElem = document.getElementById(draggableElemDataId);
+    // console.log(draggableElem.src)
+    // Change the state of droppable element
+    droppableElem.style.backgroundImage = `url(${draggableElemDataObj})`;
+    droppableElem.classList.add("dropped");
+    
+    // Change the state of draggable element
+    // draggableElem.classList.add("dragged");
+    // draggableElem.setAttribute("draggable", "false");
+
+    if(droppableElemData === 'pant'){
+        // document.getElementById('btn-pant').style.display = 'inline-block';
+        document.getElementById('btn-pant').classList.add('active');
+        draggableElemsPant.forEach((elem) => {
+            elem.classList.add("dragged");
+            elem.setAttribute("draggable", "false");
+        });
+    }
+    
+    if(droppableElemData === 'shirt'){
+        // document.getElementById('btn-shirt').style.display = 'inline-block';
+        document.getElementById('btn-shirt').classList.add('active');
+        draggableElemsShirt.forEach((elem) => {
+          elem.classList.add("dragged");
+          elem.setAttribute("draggable", "false");
+        });
+    }
+  } else {
+    event.target.classList.remove("droppable-hover");
+  }  
+
+}
+
+
+
+// const video = document.querySelector('video');
+// const canvas = document.querySelector('canvas');
+// const button = document.querySelector('#button');
+
+// // Get permission to access the camera and start the video stream
+// navigator.mediaDevices.getUserMedia({ video: true })
+//   .then((stream) => {
+//     video.srcObject = stream;
+//     video.play();
+//   })
+//   .catch((error) => {
+//     console.error(error);
+//   });
+
+// When the user clicks the button, take a snapshot of the video stream
+// button.addEventListener('click', () => {
+//   const context = canvas.getContext('2d');
+//   context.drawImage(video, 0, 0, canvas.width, canvas.height);
+  
+//   // Convert the canvas to a data URL and display it in an image element
+//   const dataURL = canvas.toDataURL();
+//   if(dataURL){
+//       document.getElementById('take-photo').style.display = 'block';
+//       const image = document.querySelector('.take-photo');
+//       image.src = dataURL;
+//   }
+// });
+
+
+const video = document.querySelector('#videoPhoto');
+const canvas = document.querySelector('#canvasPhoto');
+const button = document.querySelector('#button');
+const allow = document.querySelector('#allow');
+const scan = document.querySelector('#scan');
+const downloadLink = document.querySelector('#download-photo');
+const videoScan = document.querySelector('#video');
+
+// Get permission to access the camera and start the video stream
+navigator.mediaDevices.getUserMedia({ video: true, videoScan: true })
+  .then((stream) => {
+    video.srcObject = stream;
+    video.play();
+    allow.disabled = false;
+
+    // scane
+    videoScan.srcObject = stream;
+    videoScan.play();
+    scan.disabled = false;
+  })
+  .catch((error) => {
+    console.error(error);
+    allow.disabled = true;
+
+    // scan
+    scan.disabled = true;
+  });
+
+// When the user clicks the button, take a snapshot of the video stream
+button.addEventListener('click', () => {
+  const context = canvas.getContext('2d');
+  context.drawImage(video, 0, 0, canvas.width, canvas.height);
+  
+  // Convert the canvas to a blob and create a download link
+  canvas.toBlob((blob) => {
+    const dataURL = URL.createObjectURL(blob);
+    if(dataURL){
+        document.getElementById('take-photo').style.display = 'block';
+        const image = document.querySelector('.take-photo');
+        image.src = dataURL;
+    }
+    downloadLink.href = dataURL;
+    downloadLink.download = 'photo.jpg';
+    URL.revokeObjectURL(dataURL);
+  }, 'image/jpeg', 0.95);
+});
+
+
+button.addEventListener('click', () => {
+    const context = canvas.getContext('2d');
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    
+    // Convert the canvas to a blob and create a download link
+    canvas.toBlob((blob) => {
+        const dataURL = canvas.toDataURL();
+        if(dataURL){
+            document.getElementById('take-photo').style.display = 'block';
+            const image = document.querySelector('.take-photo');
+            image.src = dataURL;
+        }
+        downloadLink.href = dataURL;
+        downloadLink.download = 'photo.jpg';
+        // downloadLink.click();
+        URL.revokeObjectURL(dataURL);
+      }, 'image/jpeg', 5);
+});
+
+
+
+
+const canvasScan = document.querySelector('#canvas');
+const context = canvas.getContext('2d');
+
+function captureQRCode() {
+  // Copy the video frame to the canvas
+  canvasScan.width = video.videoWidth;
+  canvasScan.height = video.videoHeight;
+  context.drawImage(video, 0, 0, canvasScan.width, canvasScan.height);
+  
+  // Decode the QR code
+  const imageData = context.getImageData(0, 0, canvasScan.width, canvasScan.height);
+  const code = jsQR(imageData.data, imageData.width, imageData.height);
+  
+  if (code) {
+    // A QR code was found
+    console.log(code.data);
+  } else {
+    // No QR code was found
+    console.log('No QR code found');
+  }
+}
+
+// Call the captureQRCode function periodically to scan for QR codes
+setInterval(captureQRCode, 1000);

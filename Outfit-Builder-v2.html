@@ -67,29 +67,8 @@
         <div class="container">
             <h1 class="h-line mb-0">Outfit <em>Builder</em></h1>
 
-            <div class="py-40">
-                <div class="mb-4 br-grad position-relative">
-                    <button class="btn btn-clear border-0 btn-sm btn-grad" onclick="clearVal();">Clear</button>
-                    <div class="p-3 bg-white d-flex flex-column align-items-center">
-                        <div class="shirt droppable" data-draggable-id="shirt">
-
-                        </div>
-                        <div class="pant droppable" data-draggable-id="pant">
-
-                        </div>
-                    </div>
-                </div>
-                <!-- /.mb-4 -->
-
-                
-
-                <div class="mb-40">
-                    <button type="button" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase" data-bs-toggle="modal" data-bs-target="#shareModal"><i class="fa-solid me-2 fa-paper-plane"></i> <span>Share With Friends</span></button>
-                </div>
-
-                <h2 class="h-line mb-3">Digital <em>Wardrobe</em></h2>
-
-                <div class="mb-3">
+            <div class="py-4">
+                <div class="mb-3 mb-md-4">
                     <div class="swiper scrollSlider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
@@ -200,139 +179,178 @@
                     <!-- /.swipper -->
                 </div>
 
-                <div class="row gx-2 gx-md-3 row-cols-2 row-cols-sm-3 row-cols-md-4 row-cols-xl-5">
-                    <div class="col mb-md-3 mb-2">
-                        <div class="owl-card">
-                          <i class="fa-solid active fa-heart"></i>
-                          <img src="./images/card-image-1.png" data-src="./images/card-image-1.png" class="owl-card-img draggable" data-id="shirt" id="shirt-1" draggable="true" alt="image" />
+                <div class="row align-items-start">
+                    <div class="col-12 mb-3">
+                        <h2 class="h-line mb-0">Digital <em>Wardrobe</em></h2>
+                    </div>
+                    <div class="col-md-4 sticky-top col-sm-5 order-sm-1">
+                        <div class="mb-4 br-grad position-relative">
+                            <div class="d-flex flex-column btn-clear">
+                                <button class="btn border-0 btn-sm order-1 mb-2 btn-grad" id="btn-shirt" onclick="clearShirt();">Clear Shirt</button>
+                                <button class="btn border-0 btn-sm order-2 mb-2 btn-grad" id="btn-pant" onclick="clearPant();">Clear Pant</button>
+                                <button class="btn border-0 btn-sm mb-2 btn-grad" id="btn-clear" onclick="clearBoth();">Clear Both</button>
+                            </div>
+                            <div class="p-3 bg-white d-flex flex-column align-items-center">
+                                <div class="shirt droppable" data-draggable-id="shirt">
         
-                          <div class="owl-card-info">
-                            <p>Balloon-sleeved smocked dress</p>
-                            <a href="#">Try Now</a>
-                          </div>
-                        </div>
-                        <!-- /.owl-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col mb-md-3 mb-2">
-                        <div class="owl-card">
-                            <i class="fa-solid active fa-heart"></i>
-                            <img src="./images/card-image-1.png" data-src="./images/card-image-1.png" class="owl-card-img draggable" data-id="shirt" id="shirt-2" draggable="true" alt="image" />
-          
-                            <div class="owl-card-info">
-                              <p>Balloon-sleeved smocked dress</p>
-                              <a href="#">Try Now</a>
+                                </div>
+                                <div class="pant droppable" data-draggable-id="pant">
+        
+                                </div>
                             </div>
                         </div>
-                        <!-- /.owl-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col mb-md-3 mb-2">
-                        <div class="owl-card">
-                            <i class="fa-solid active fa-heart"></i>
-                            <img src="./images/card-image-1.png" data-src="./images/card-image-1.png" class="owl-card-img draggable" data-id="pant" id="pant-1" draggable="true" alt="image" />
-          
-                            <div class="owl-card-info">
-                              <p>Balloon-sleeved smocked dress</p>
-                              <a href="#">Try Now</a>
-                            </div>
+                        <!-- /.mb-4 -->
+                        <div class="mb-40">
+                            <button type="button" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase" data-bs-toggle="modal" data-bs-target="#shareModal"><i class="fa-solid me-2 fa-paper-plane"></i> <span>Share With Friends</span></button>
                         </div>
-                        <!-- /.owl-card -->
                     </div>
-                    <!-- /.col -->
-                    <div class="col mb-md-3 mb-2">
-                        <div class="owl-card">
-                            <i class="fa-solid active fa-heart"></i>
-                            <img src="./images/card-image-1.png" data-src="./images/card-image-1.png" class="owl-card-img draggable" data-id="pant" id="pant-2" draggable="true" class="owl-card-img" alt="image" />
-          
-                            <div class="owl-card-info">
-                              <p>Balloon-sleeved smocked dress</p>
-                              <a href="#">Try Now</a>
+                    <!-- /.col-sm-4 -->
+                    <div class="col-md-8 col-sm-7">
+                        <div class="row gx-2 gx-md-3 row-cols-2 row-cols-md-3 row-cols-xl-4">
+                            <div class="col mb-md-3 mb-2">
+                                <div class="owl-card">
+                                  <i class="fa-solid active fa-heart"></i>
+                                  <img src="./images/cloths/shirts-for-men-1.png" data-src="./images/cloths/shirts-for-men-1.png" class="owl-card-img draggable" data-id="shirt" id="shirt-1" draggable="true" alt="image" />
+                
+                                  <div class="owl-card-info">
+                                    <p>Balloon-sleeved smocked dress</p>
+                                    <a href="#">Try Now</a>
+                                  </div>
+                                </div>
+                                <!-- /.owl-card -->
                             </div>
-                        </div>
-                        <!-- /.owl-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col mb-md-3 mb-2">
-                        <div class="owl-card">
-                            <i class="fa-solid active fa-heart"></i>
-                            <img src="./images/card-image-1.png" class="owl-card-img" alt="image" />
-          
-                            <div class="owl-card-info">
-                              <p>Balloon-sleeved smocked dress</p>
-                              <a href="#">Try Now</a>
+                            <!-- /.col -->
+                            
+                            <div class="col mb-md-3 mb-2">
+                                <div class="owl-card">
+                                  <i class="fa-solid active fa-heart"></i>
+                                  <img src="./images/cloths/shirts-for-men-2.png" data-src="./images/cloths/shirts-for-men-2.png" class="owl-card-img draggable" data-id="shirt" id="shirt-2" draggable="true" alt="image" />
+                
+                                  <div class="owl-card-info">
+                                    <p>Balloon-sleeved smocked dress</p>
+                                    <a href="#">Try Now</a>
+                                  </div>
+                                </div>
+                                <!-- /.owl-card -->
                             </div>
-                        </div>
-                        <!-- /.owl-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col mb-md-3 mb-2">
-                        <div class="owl-card">
-                            <i class="fa-solid active fa-heart"></i>
-                            <img src="./images/card-image-1.png" class="owl-card-img" alt="image" />
-          
-                            <div class="owl-card-info">
-                              <p>Balloon-sleeved smocked dress</p>
-                              <a href="#">Try Now</a>
+                            <!-- /.col -->
+                            
+                            <div class="col mb-md-3 mb-2">
+                                <div class="owl-card">
+                                  <i class="fa-solid active fa-heart"></i>
+                                  <img src="./images/cloths/shirts-for-men-3.webp" data-src="./images/cloths/shirts-for-men-3.webp" class="owl-card-img draggable" data-id="shirt" id="shirt-3" draggable="true" alt="image" />
+                
+                                  <div class="owl-card-info">
+                                    <p>Balloon-sleeved smocked dress</p>
+                                    <a href="#">Try Now</a>
+                                  </div>
+                                </div>
+                                <!-- /.owl-card -->
                             </div>
-                        </div>
-                        <!-- /.owl-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col mb-md-3 mb-2">
-                        <div class="owl-card">
-                            <i class="fa-solid active fa-heart"></i>
-                            <img src="./images/card-image-1.png" class="owl-card-img" alt="image" />
-          
-                            <div class="owl-card-info">
-                              <p>Balloon-sleeved smocked dress</p>
-                              <a href="#">Try Now</a>
+                            <!-- /.col -->
+                            
+                            <div class="col mb-md-3 mb-2">
+                                <div class="owl-card">
+                                  <i class="fa-solid active fa-heart"></i>
+                                  <img src="./images/cloths/shirts-for-men-4.jpeg" data-src="./images/cloths/shirts-for-men-4.jpeg" class="owl-card-img draggable" data-id="shirt" id="shirt-4" draggable="true" alt="image" />
+                
+                                  <div class="owl-card-info">
+                                    <p>Balloon-sleeved smocked dress</p>
+                                    <a href="#">Try Now</a>
+                                  </div>
+                                </div>
+                                <!-- /.owl-card -->
                             </div>
-                        </div>
-                        <!-- /.owl-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col mb-md-3 mb-2">
-                        <div class="owl-card">
-                            <i class="fa-solid active fa-heart"></i>
-                            <img src="./images/card-image-1.png" class="owl-card-img" alt="image" />
-          
-                            <div class="owl-card-info">
-                              <p>Balloon-sleeved smocked dress</p>
-                              <a href="#">Try Now</a>
+                            <!-- /.col -->
+                            
+                            <div class="col mb-md-3 mb-2">
+                                <div class="owl-card">
+                                  <i class="fa-solid active fa-heart"></i>
+                                  <img src="./images/cloths/shirts-for-men-5.webp" data-src="./images/cloths/shirts-for-men-5.webp" class="owl-card-img draggable" data-id="shirt" id="shirt-5" draggable="true" alt="image" />
+                
+                                  <div class="owl-card-info">
+                                    <p>Balloon-sleeved smocked dress</p>
+                                    <a href="#">Try Now</a>
+                                  </div>
+                                </div>
+                                <!-- /.owl-card -->
                             </div>
-                        </div>
-                        <!-- /.owl-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col mb-md-3 mb-2">
-                        <div class="owl-card">
-                            <i class="fa-solid active fa-heart"></i>
-                            <img src="./images/card-image-1.png" class="owl-card-img" alt="image" />
-          
-                            <div class="owl-card-info">
-                              <p>Balloon-sleeved smocked dress</p>
-                              <a href="#">Try Now</a>
+                            <!-- /.col -->
+                            
+                            <div class="col mb-md-3 mb-2">
+                                <div class="owl-card">
+                                  <i class="fa-solid active fa-heart"></i>
+                                  <img src="./images/cloths/pants-for-men-1.png" data-src="./images/cloths/pants-for-men-1.png" class="owl-card-img draggable" data-id="pant" id="pant-1" draggable="true" alt="image" />
+                
+                                  <div class="owl-card-info">
+                                    <p>Balloon-sleeved smocked dress</p>
+                                    <a href="#">Try Now</a>
+                                  </div>
+                                </div>
+                                <!-- /.owl-card -->
                             </div>
-                        </div>
-                        <!-- /.owl-card -->
-                    </div>
-                    <!-- /.col -->
-                    <div class="col mb-md-3 mb-2">
-                        <div class="owl-card">
-                            <i class="fa-solid active fa-heart"></i>
-                            <img src="./images/card-image-1.png" class="owl-card-img" alt="image" />
-          
-                            <div class="owl-card-info">
-                              <p>Balloon-sleeved smocked dress</p>
-                              <a href="#">Try Now</a>
+                            <!-- /.col -->
+                            
+                            <div class="col mb-md-3 mb-2">
+                                <div class="owl-card">
+                                  <i class="fa-solid active fa-heart"></i>
+                                  <img src="./images/cloths/pants-for-men-2.jpeg" data-src="./images/cloths/pants-for-men-2.jpeg" class="owl-card-img draggable" data-id="pant" id="pant-2" draggable="true" alt="image" />
+                
+                                  <div class="owl-card-info">
+                                    <p>Balloon-sleeved smocked dress</p>
+                                    <a href="#">Try Now</a>
+                                  </div>
+                                </div>
+                                <!-- /.owl-card -->
                             </div>
+                            <!-- /.col -->
+                            
+                            <div class="col mb-md-3 mb-2">
+                                <div class="owl-card">
+                                  <i class="fa-solid active fa-heart"></i>
+                                  <img src="./images/cloths/pants-for-men-3.jpeg" data-src="./images/cloths/pants-for-men-3.jpeg" class="owl-card-img draggable" data-id="pant" id="pant-3" draggable="true" alt="image" />
+                
+                                  <div class="owl-card-info">
+                                    <p>Balloon-sleeved smocked dress</p>
+                                    <a href="#">Try Now</a>
+                                  </div>
+                                </div>
+                                <!-- /.owl-card -->
+                            </div>
+                            <!-- /.col -->
+                            
+                            <div class="col mb-md-3 mb-2">
+                                <div class="owl-card">
+                                  <i class="fa-solid active fa-heart"></i>
+                                  <img src="./images/cloths/pants-for-men-4.png" data-src="./images/cloths/pants-for-men-4.png" class="owl-card-img draggable" data-id="pant" id="pant-4" draggable="true" alt="image" />
+                
+                                  <div class="owl-card-info">
+                                    <p>Balloon-sleeved smocked dress</p>
+                                    <a href="#">Try Now</a>
+                                  </div>
+                                </div>
+                                <!-- /.owl-card -->
+                            </div>
+                            <!-- /.col -->
+                            
+                            <div class="col mb-md-3 mb-2">
+                                <div class="owl-card">
+                                  <i class="fa-solid active fa-heart"></i>
+                                  <img src="./images/cloths/pants-for-men-5.jpeg" data-src="./images/cloths/pants-for-men-5.jpeg" class="owl-card-img draggable" data-id="pant" id="pant-4" draggable="true" alt="image" />
+                
+                                  <div class="owl-card-info">
+                                    <p>Balloon-sleeved smocked dress</p>
+                                    <a href="#">Try Now</a>
+                                  </div>
+                                </div>
+                                <!-- /.owl-card -->
+                            </div>
+                            <!-- /.col -->
                         </div>
-                        <!-- /.owl-card -->
+                        <!-- /.row -->
                     </div>
-                    <!-- /.col -->
+                    <!-- /.col-lg-8 -->
                 </div>
-                <!-- /.row -->
             </div>
             <!-- /.py-40 -->
           </div>
@@ -390,16 +408,16 @@
                             </label>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="d-flex btn button-link align-items-center">
+                            <button id="allow" disabled data-bs-toggle="modal" data-bs-target="#takePhotoModal" class="d-flex w-100 btn button-link align-items-center">
                                 <span>Take Photo</span>
                                 <i class="fa-solid ms-auto fa-chevron-right"></i>
-                            </a>
+                            </button>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="d-flex btn button-link align-items-center">
+                            <button id="scan" disabled data-bs-toggle="modal" data-bs-target="#scanModal" class="d-flex w-100 btn button-link align-items-center">
                                 <span>Scan QR Code</span>
                                 <i class="fa-solid ms-auto fa-chevron-right"></i>
-                            </a>
+                            </button>
                         </li>
                         <li class="mb-2">
                             <a href="Search-Online-Brand.html" class="d-flex btn button-link align-items-center">
@@ -409,6 +427,55 @@
                         </li>
                     </ul>
                     <button type="submit" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Cancel</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Take Photo Modal -->
+        <div class="modal modal-theme fade" id="takePhotoModal" tabindex="-1" aria-labelledby="takePhotoModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content rounded-0 border-0">
+                  <div class="modal-header py-2 border-0 rounded-0">
+                    <p class="mb-0">Take Photo</p>
+                    <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body p-3">
+                    <div class="row">
+                        <div class="col-sm-8 mb-sm-0 mb-3">
+                            <video id="videoPhoto" class="w-100 mb-3 d-block"></video>
+                            <button id="button" type="button" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Take Photo</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                        </div>
+                        <div class="col-sm-4">
+                            <canvas id="canvasPhoto" class="w-100 mb-3 d-none"></canvas>
+                            <div id="take-photo" style="display: none;">
+                                <img src="" class="take-photo img-fluid mb-3" alt="take-photo" />
+                                <a href="#" download="true" id="download-photo" class="btn btn-grad btn-sm d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Download</span> <i class="fa-solid ms-2 fa-chevron-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- scan Modal -->
+        <div class="modal modal-theme fade" id="scanModal" tabindex="-1" aria-labelledby="scanModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content rounded-0 border-0">
+                  <div class="modal-header py-2 border-0 rounded-0">
+                    <p class="mb-0">Scan QR code</p>
+                    <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body p-3">
+                    <div class="row">
+                        <div class="col-sm-6 mb-sm-0 mb-3">
+                            <video id="video" class="w-100"></video>
+                        </div>
+                        <div class="col-sm-6">
+                            <canvas id="canvas" class="w-100"></canvas>
+                        </div>
+                    </div>
                   </div>
                 </div>
             </div>
@@ -487,6 +554,7 @@
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.steps.min.js"></script>

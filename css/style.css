@@ -1163,3 +1163,84 @@ label.item-circle .item-span:before{
 .modal-list .button-link{
 	background-color: var(--white);
 }
+
+.shirt{
+	width: 190px;
+	height: 190px;
+	aspect-ratio: 1 / 1;
+	background: transparent url('../images/shirt.png') no-repeat center / contain;
+}
+.pant{
+	width: 190px;
+	height: 264px;
+	background: transparent url('../images/pant.png') no-repeat center / contain;
+}
+
+.draggable {
+	cursor: move;
+  }
+  
+  .draggable:hover {
+	opacity: 0.7;
+  }
+  
+  .draggable.dragged {
+	opacity: .3;
+	cursor: default;
+  }
+  
+  .droppable.droppable-hover {
+	  outline: 2px solid #343a40;
+  }
+  
+  .droppable.dropped {
+	  outline: none;
+	color: #fff;
+  }
+
+  .btn-clear{
+	  position: absolute;
+	  right: 5px;
+	  top: 5px;
+  }
+
+  .btn-sm{
+	  border-radius: 25px;
+	  padding: 4px 10px;
+	  font-size: 11px;
+  }
+
+  .sticky-top{
+	  top: 15px;
+  }
+
+  .btn-clear .btn{
+	  display: none;
+  }
+
+  .btn-clear .btn.active{
+	  display: block;
+  }
+
+  .btn-clear .btn.active + .btn.active + #btn-clear{
+	  display: block;
+  }
+
+  canvas{
+	  object-position: center;
+	  aspect-ratio: 1 / 1;
+	  object-fit: cover;
+  }
+
+  .take-photo{
+	  object-fit: cover;
+	  object-position: center;
+  }
+
+  .modal-list .btn:disabled{
+	  border-width: 0 0 1px 0;
+  }
+
+  #canvas {
+	display: none;
+  }
