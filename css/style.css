@@ -1302,6 +1302,10 @@ label.item-circle .item-span:before{
 	 text-transform: capitalize !important;
 	border-color: rgba(193, 154, 107, 0.3) !important;
 }
+.fc-day-grid-event{
+	margin-left: 0 !important;
+	margin-right: 0 !important;
+}
 
 [disabled]{
 	opacity: 0.5;
