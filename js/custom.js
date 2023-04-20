@@ -107,25 +107,27 @@ $(document).ready(function() {
         }
     })
 
-    var swiper = new Swiper(".scrollSlider", {
-        slidesPerView: "auto",
-        spaceBetween: 15,
-        mousewheel: {
-          releaseOnEdges: true,
-        },
-        // scrollbar: {
-        //   el: ".swiper-scrollbar",
-        //   hide: true,
-        // },
-        breakpoints:{
-            0: {
-                spaceBetween: 10,
+    if($('.scrollSlider').length > 0){
+        var swiper = new Swiper(".scrollSlider", {
+            slidesPerView: "auto",
+            spaceBetween: 15,
+            mousewheel: {
+              releaseOnEdges: true,
             },
-            1024: {
-                spaceBetween: 15
+            // scrollbar: {
+            //   el: ".swiper-scrollbar",
+            //   hide: true,
+            // },
+            breakpoints:{
+                0: {
+                    spaceBetween: 10,
+                },
+                1024: {
+                    spaceBetween: 15
+                }
             }
-        }
-    });
+        });
+    }
 
 });
 
@@ -311,89 +313,148 @@ const scan = document.querySelector('#scan');
 const downloadLink = document.querySelector('#download-photo');
 const videoScan = document.querySelector('#video');
 
-// Get permission to access the camera and start the video stream
-navigator.mediaDevices.getUserMedia({ video: true, videoScan: true })
-  .then((stream) => {
-    video.srcObject = stream;
-    video.play();
-    allow.disabled = false;
-
-    // scane
-    videoScan.srcObject = stream;
-    videoScan.play();
-    scan.disabled = false;
-  })
-  .catch((error) => {
-    console.error(error);
-    allow.disabled = true;
-
-    // scan
-    scan.disabled = true;
-  });
-
-// When the user clicks the button, take a snapshot of the video stream
-button.addEventListener('click', () => {
-  const context = canvas.getContext('2d');
-  context.drawImage(video, 0, 0, canvas.width, canvas.height);
-  
-  // Convert the canvas to a blob and create a download link
-  canvas.toBlob((blob) => {
-    const dataURL = URL.createObjectURL(blob);
-    if(dataURL){
-        document.getElementById('take-photo').style.display = 'block';
-        const image = document.querySelector('.take-photo');
-        image.src = dataURL;
-    }
-    downloadLink.href = dataURL;
-    downloadLink.download = 'photo.jpg';
-    URL.revokeObjectURL(dataURL);
-  }, 'image/jpeg', 0.95);
-});
-
-
-button.addEventListener('click', () => {
-    const context = canvas.getContext('2d');
-    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+if(video){
+    // Get permission to access the camera and start the video stream
+    navigator.mediaDevices.getUserMedia({ video: true, videoScan: true })
+      .then((stream) => {
+        video.srcObject = stream;
+        video.play();
+        allow.disabled = false;
     
-    // Convert the canvas to a blob and create a download link
-    canvas.toBlob((blob) => {
-        const dataURL = canvas.toDataURL();
-        if(dataURL){
-            document.getElementById('take-photo').style.display = 'block';
-            const image = document.querySelector('.take-photo');
-            image.src = dataURL;
-        }
-        downloadLink.href = dataURL;
-        downloadLink.download = 'photo.jpg';
-        // downloadLink.click();
-        URL.revokeObjectURL(dataURL);
-      }, 'image/jpeg', 5);
-});
+        // scane
+        videoScan.srcObject = stream;
+        videoScan.play();
+        scan.disabled = false;
+      })
+      .catch((error) => {
+        console.error(error);
+        allow.disabled = true;
+    
+        // scan
+        scan.disabled = true;
+      });
+}
+
+  if(document.querySelector('.take-photo')){
+      // When the user clicks the button, take a snapshot of the video stream
+      button.addEventListener('click', () => {
+        const context = canvas.getContext('2d');
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        
+        // Convert the canvas to a blob and create a download link
+        canvas.toBlob((blob) => {
+          const dataURL = URL.createObjectURL(blob);
+          if(dataURL){
+              document.getElementById('take-photo').style.display = 'block';
+              const image = document.querySelector('.take-photo');
+              image.src = dataURL;
+          }
+          downloadLink.href = dataURL;
+          downloadLink.download = 'photo.jpg';
+          URL.revokeObjectURL(dataURL);
+        }, 'image/jpeg', 0.95);
+      });
+  }
+
+if(document.querySelector('.take-photo')){
+    button.addEventListener('click', () => {
+        const context = canvas.getContext('2d');
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        
+        // Convert the canvas to a blob and create a download link
+        canvas.toBlob((blob) => {
+            const dataURL = canvas.toDataURL();
+            if(dataURL){
+                document.getElementById('take-photo').style.display = 'block';
+                const image = document.querySelector('.take-photo');
+                image.src = dataURL;
+            }
+            downloadLink.href = dataURL;
+            downloadLink.download = 'photo.jpg';
+            // downloadLink.click();
+            URL.revokeObjectURL(dataURL);
+        }, 'image/jpeg', 5);
+    });
+}
 
 
 
 
 const canvasScan = document.querySelector('#canvas');
-const context = canvas.getContext('2d');
-
-function captureQRCode() {
-  // Copy the video frame to the canvas
-  canvasScan.width = video.videoWidth;
-  canvasScan.height = video.videoHeight;
-  context.drawImage(video, 0, 0, canvasScan.width, canvasScan.height);
-  
-  // Decode the QR code
-  const imageData = context.getImageData(0, 0, canvasScan.width, canvasScan.height);
-  const code = jsQR(imageData.data, imageData.width, imageData.height);
-  
-  if (code) {
-    // A QR code was found
-    console.log(code.data);
-  } else {
-    // No QR code was found
-    console.log('No QR code found');
-  }
+if(canvasScan){
+    const context = canvasScan.getContext('2d');
+    function captureQRCode() {
+      // Copy the video frame to the canvas
+      canvasScan.width = video.videoWidth;
+      canvasScan.height = video.videoHeight;
+      context.drawImage(video, 0, 0, canvasScan.width, canvasScan.height);
+      
+      // Decode the QR code
+      const imageData = context.getImageData(0, 0, canvasScan.width, canvasScan.height);
+      const code = jsQR(imageData.data, imageData.width, imageData.height);
+      
+      if (code) {
+        // A QR code was found
+        console.log(code.data);
+      } else {
+        // No QR code was found
+        console.log('No QR code found');
+      }
+    }
 }
 
 // Call the captureQRCode function periodically to scan for QR codes
 setInterval(captureQRCode, 1000);
+
+
+
+
+var eventsArray = [
+    {
+      title  : 'event1',
+      start  : '2019-07-20'
+    },
+    {
+      title  : 'event2',
+      start  : '2019-08-05',
+      end    : '2019-08-07'
+    },
+    {
+      title  : 'event3',
+      start  : '2019-09-03'
+    },
+    {
+      title  : 'event3',
+      start  : '2019-10-05'
+    }
+  ];
+
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+        height: 600,
+        plugins: [ 'dayGrid', 'interaction' ],
+        
+        dateClick: function(info) {
+            alert('Clicked on: ' + info.dateStr);
+          
+          eventsArray.push({
+            date: info.dateStr,
+            title: "test event added from click"
+          });
+          
+          calendar.refetchEvents();
+        },
+      
+        eventClick: function(info) {
+          alert(info.event.title)
+        },
+      
+        events: function(info, successCallback, failureCallback) {
+          successCallback(eventsArray);
+        }
+    });
+
+    calendar.render();
+  });

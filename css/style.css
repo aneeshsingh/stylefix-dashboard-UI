@@ -1244,3 +1244,65 @@ label.item-circle .item-span:before{
   #canvas {
 	display: none;
   }
+
+
+
+  /* calender */
+ .fc-view-container{
+	 background-color: var(--white);
+ }
+ .fc td, .fc th{
+	font-family: 'Aktiv Grotesk';
+	border-color: rgba(193, 154, 107, 0.3) !important;
+ }
+ .fc td{
+	font-weight: 400;
+ }
+
+ .fc-day-number{
+	 display: block;
+	 text-align: right;
+	 padding: 5px 25px 5px 5px;
+ }
+
+ .fc th{
+	 font-weight: 500;
+	 padding: 5px !important;
+ }
+ .fc-event, .fc-event-dot{
+	 border: none !important;
+	 padding: 4px 8px !important;
+	 background: var(--btnGrad);
+	 border-radius: 0 !important;
+	 color: var(--dark) !important;
+ }
+
+ .fc-toolbar h2{
+	font-family: 'Aktiv Grotesk';
+	font-weight: 500;
+ }
+
+ .fc-toolbar.fc-header-toolbar{
+	 margin-bottom: var(--24) !important;
+ }
+
+ .fc-toolbar .fc-center{
+	 order: -1;
+	 margin-right: 150px;
+ }
+
+ .fc-button-group>.fc-button{
+	color: var(--dark) !important;
+	background: var(--bgCard) !important;
+	border-color: rgba(193, 154, 107, 0.3) !important;
+ }
+ .fc-button-primary {
+	 color: var(--dark) !important;
+	 background: var(--bgCard) !important;
+	 text-transform: capitalize !important;
+	border-color: rgba(193, 154, 107, 0.3) !important;
+}
+
+[disabled]{
+	opacity: 0.5;
+}
