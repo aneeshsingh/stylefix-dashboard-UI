@@ -1429,3 +1429,7 @@ label.item-circle .item-span:before{
 	right: 3px;
 	bottom: 0;
 }
+
+#canvasPhoto{
+	height: 500px !important;
+}

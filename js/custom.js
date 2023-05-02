@@ -345,6 +345,7 @@ function drop(event) {
 const video = document.querySelector('#videoPhoto');
 const canvas = document.querySelector('#canvasPhoto');
 const button = document.querySelector('#button');
+const buttonText = document.querySelector('#button-text');
 const allow = document.querySelectorAll('#allow');
 const scan = document.querySelector('#scan');
 const downloadLink = document.querySelector('#download-photo');
@@ -402,12 +403,14 @@ if(video){
 
 if(document.querySelector('.take-photo')){
     button.addEventListener('click', () => {
+        buttonText.innerHTML="Retake Photo"
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
         const context = canvas.getContext('2d');
         context.drawImage(video, 0, 0, canvas.width, canvas.height);
-        
         // Convert the canvas to a blob and create a download link
         canvas.toBlob((blob) => {
-            const dataURL = canvas.toDataURL();
+            const dataURL = canvas.toDataURL('image/png');
             if(dataURL){
                 document.getElementById('take-photo').style.display = 'block';
                 const image = document.querySelector('.take-photo');
