@@ -64,7 +64,7 @@
 
       <main class="page-dash z1">
         <div class="container">
-            <h1 class="h-line mb-0">Leaderboard</h1>
+            <h1 class="h-line mb-0">Join A <em>Challenge</em></h1>
 
             <div class="py-40">
                 <div class="row justify-content-around">
@@ -113,53 +113,9 @@
                     </div>
                     <!-- /.col-xl-4 -->
                     <div class="col-xl-4 col-lg-5 col-sm-6 mb-sm-0 mb-4">
-                        <h3 class="mb-4">Leaderboard</h3>
+                        <h3 class="mb-4">Join Challenge</h3>
 
-                        <a href="#" class="d-block active leader-strip br-grad mb-2">
-                            <span class="d-flex p-2 align-items-center">
-                                <span class="d-flex flex-grow-1 align-items-center">
-                                    <img src="./images/pic-lg.png" class="me-2" alt="pic-lg" />                                    
-                                    Jane Doe
-                                </span>
-                                <span>1st</span>
-                            </span>
-                        </a>
-                        <a href="#" class="d-block leader-strip br-grad mb-2">
-                            <span class="d-flex p-2 align-items-center">
-                                <span class="d-flex flex-grow-1 align-items-center">
-                                    <img src="./images/pic-lg.png" class="me-2" alt="pic-lg" />                                    
-                                    Sukh-2 The one user who came in
-                                </span>
-                                <span>2nd</span>
-                            </span>
-                        </a>
-                        <a href="#" class="d-block leader-strip br-grad mb-2">
-                            <span class="d-flex p-2 align-items-center">
-                                <span class="d-flex flex-grow-1 align-items-center">
-                                    <img src="./images/pic-lg.png" class="me-2" alt="pic-lg" />                                    
-                                    Kira Shanna
-                                </span>
-                                <span>3rd</span>
-                            </span>
-                        </a>
-                        <a href="#" class="d-block leader-strip br-grad mb-2">
-                            <span class="d-flex p-2 align-items-center">
-                                <span class="d-flex flex-grow-1 align-items-center">
-                                    <img src="./images/pic-lg.png" class="me-2" alt="pic-lg" />                                    
-                                    Madeleine Avonlea
-                                </span>
-                                <span>4th</span>
-                            </span>
-                        </a>
-                        <a href="#" class="d-block leader-strip br-grad mb-2">
-                            <span class="d-flex p-2 align-items-center">
-                                <span class="d-flex flex-grow-1 align-items-center">
-                                    <img src="./images/pic-lg.png" class="me-2" alt="pic-lg" />                                    
-                                    Stephania Ginny
-                                </span>
-                                <span>5th</span>
-                            </span>
-                        </a>
+                        <a href="#addNewModal" data-bs-toggle="modal" data-bs-target="#addNewModal" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Join Challenge</span> <i class="fa-solid ms-2 fa-chevron-right"></i></a>
                     </div>
                     <!-- /.col-xl-4 -->
                 </div>
@@ -169,6 +125,118 @@
           </div>
           <!-- /.container -->
       </main>
+
+      <!-- addNew Modal -->
+      <div class="modal modal-theme fade" id="addNewModal" tabindex="-1" aria-labelledby="addNewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header py-2 border-0 rounded-0">
+                <p class="mb-0">Upload Profile Picture</p>
+                <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-3">
+                <ul class="list-unstyled modal-list">
+                    <li class="mb-2">
+                      <button data-bs-toggle="modal" data-bs-target="#uploadModal" class="d-flex w-100 btn button-link align-items-center">
+                          <!-- <input type="file" hidden /> -->
+                          <span>Upload Photo</span>
+                          <i class="fa-solid ms-auto fa-chevron-right"></i>
+                        </button>
+                    </li>
+                    <li class="mb-2">
+                        <button id="allow" disabled data-bs-toggle="modal" data-bs-target="#takePhotoModal" class="d-flex w-100 btn button-link align-items-center">
+                            <span>Take Photo</span>
+                            <i class="fa-solid ms-auto fa-chevron-right"></i>
+                        </button>
+                    </li>
+                    <li class="mb-2">
+                        <a class="d-flex w-100 btn button-link align-items-center">
+                            <span>Create An Outfit</span>
+                            <i class="fa-solid ms-auto fa-chevron-right"></i>
+                        </a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+      <!-- Upload pic Modal -->
+      <div class="modal modal-theme fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header py-2 border-0 rounded-0">
+                <p class="mb-0">Join A Challenge</p>
+                <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-3">
+                <form action="/" class="form-validate">
+                  <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <div class="br-grad h-100">
+                            <label class="upload-box h-100 m-0 d-flex bg-white">
+                                <input type="file" accept="image/*" hidden />
+                                <div class="m-auto d-block d-flex text-center align-items-center flex-column">
+                                <img src="images/upload-svg.svg" alt="icon" />
+                                <h6><u>Click to upload</u></h6>
+                                <p class="mb-0"><small>Maximum file size 10 MB in .png, .jpg, .hiec</small></p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="mb-2">
+                        <label>Title</label>
+                        <div class="br-grad position-relative">
+                          <input type="text" class="form-control form-control-limit"  required name="title" maxlength="60" />
+                          <span class="limit-count"><span class="lc-num">0</span>/60</span>
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label>Description</label>
+                          <div class="br-grad position-relative">
+                              <textarea class="form-control form-control-limit rounded-0" maxlength="300" rows="8" name="message" required placeholder=""></textarea>
+                              <span class="limit-count"><span class="lc-num">0</span>/300</span>
+                          </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <button type="submit" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Join Challange</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                </form>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+      <!-- Take Photo Modal -->
+      <div class="modal modal-theme fade" id="takePhotoModal" tabindex="-1" aria-labelledby="takePhotoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header py-2 border-0 rounded-0">
+                <p class="mb-0">Take Photo</p>
+                <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-3">
+                <div class="row">
+                    <div class="col-sm-6 mb-sm-0 mb-3">
+                        <video id="videoPhoto" class="w-100 mb-3 d-block"></video>
+                        <button id="button" type="button" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Take Photo</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                    </div>
+                    <div class="col-sm-6">
+                        <canvas id="canvasPhoto" class="w-100 mb-3 d-none"></canvas>
+                        <div id="take-photo" style="display: none;">
+                            <img src="" class="take-photo img-fluid mb-3" alt="take-photo" />
+                            <a href="#" download="true" id="download-photo" class="btn btn-grad btn-sm d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Download</span> <i class="fa-solid ms-2 fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
 
       <footer class="footer br-grad">
         <div class="pb-4 pt-5 bg-card">

@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.2.0/main.min.css" rel="stylesheet"/>
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Custom css -->
-    <link href="css/intlTelInput.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <link href="css/responsive.css" rel="stylesheet" />
     <link href="css/fonts.css" rel="stylesheet" />
@@ -36,7 +36,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-3 mt-md-0 mt-3 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link active" href="#">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Plans</a>
@@ -57,35 +57,36 @@
       </nav>
 
       <img src="./images/tl-circles.svg" class="tl-circle" alt="tl circles" />
-      <!-- <img src="./images/ml-circles.svg" class="ml-circle" alt="ml circles" /> -->
+      <img src="./images/ml-circles.svg" class="ml-circle" alt="ml circles" />
 
-      <main class="page-web position-relative d-md-flex z1">
-        <img src="./images/forgot-password-banner.png" alt="login us" class="page-banner-right d-none d-md-block" />
-        <div class="container d-md-flex flex-column flex-grow-1">
+      <main class="page-web z1">
+        <div class="container">
             <div class="py-30">
-                <h1 class="mb-0 h-line-before">Forgot <em>Password?</em></h1>
+                <h1 class="mb-0 h-line-before">Book A <em>Stylist</em></h1>
             </div>
             <!-- /.py-30 -->
 
-            <div class="pb-5 pt-md-4 my-auto">
-                <div class="row justify-content-center justify-content-md-start mb-md-5">
-                    <div class="col-sm-7 col-md-5 col-lg-4">
-                        <p class="mb-4">Type in your email below and we’ll send you a link to reset your password.</p>
-                        <form action="/" class="form-validate mb-4">
-                            <div class="mb-3">
-                                <label>Email</label>
-                                <div class="br-grad">
-                                    <input type="email" name="email" required class="form-control rounded-0" placeholder="Enter your email" />
-                                </div>
-                            </div>
-                            <!-- /.mb-3 -->
-                            <button type="submit" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Sumbit</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
-                        </form>
+            <div class="ads-banner bg-black text-white mb-40">
+                <div class="row gx-0">
+                    <div class="col-4 bg-cover" style="background-image: url('./images/frame-image.png');"></div>
+                    <!-- /.col-4 -->
+                    <div class="col-8">
+                        <p class="p-lg-4 p-3">Please let us know what time suits you and we will organise your consultation. Do remember first 30 mins are completely FREE.</p>
                     </div>
-                    <!-- /.col-md-4 -->
+                    <!-- /.col-8 -->
                 </div>
+                <!-- /.row -->
             </div>
-            <!-- /.mb-50 -->
+            <!-- /.ads-banner -->
+
+            <div class="mb-40 py-3">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-9">
+                      <img src="./images/calendarly.png" alt="image" class="img-fluid" />    
+                    </div>
+                  </div>
+            </div>
+            <!-- /.mb-40 -->
         </div>
         <!-- /.container -->
       </main>
@@ -163,9 +164,9 @@
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script src="js/intlTelInput.js"></script>
-    <script src="js/isValidNumber.js"></script>
-    <script src="js/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/core@4.2.0/main.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/daygrid@4.2.0/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fullcalendar/interaction@4.2.0/main.js"></script>
     <script src="js/custom.js"></script>
   </body>
 </html>

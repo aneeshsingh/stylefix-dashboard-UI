@@ -132,7 +132,7 @@
 		position: fixed;
 		background-color: var(--white);
 	}
-	.navbar-dashboard-control a:not(:first-child) {
+	.navbar-dashboard-control >  *:not(:first-child) {
 		margin-left: 10px;
 	}
 	.navigation-menu{
@@ -159,6 +159,16 @@
 	}
 	.owl-card-post small{
 		font-size: 11px;
+	}
+	.navigation-menu ul{
+		font-size: var(--24);
+	}
+	.username.dropdown-toggle:after{
+		display: none;
+	}
+
+	.upload-box {
+		min-height: 220px;
 	}
 }
 
@@ -216,5 +226,12 @@
 
 	.fc-toolbar .fc-center{
 		display: none;
+	}
+
+	.dropdown-menu-notification{
+		width: 320px;
+	}
+	.dropdown-menu-notification ul{
+		max-height: calc(100vh - (55px + 97px));
 	}
 }

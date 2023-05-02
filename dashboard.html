@@ -29,11 +29,136 @@
             <div class="ms-auto navbar-dashboard-control d-flex align-items-center">
                 <a href="#"><img src="./images/heart-icon.svg" alt="icon" /></a>
                 <a href="#"><img src="./images/calendar-icon.svg" alt="icon" /></a>
-                <a href="#"><img src="./images/notification-icon.svg" alt="icon" /></a>
-                <a href="#" class="username">
+                <!-- <a href="#"><img src="./images/notification-icon.svg" alt="icon" /></a> -->
+                <div class="dropdown dropdown-center">
+                  <button class="btn p-0 border-0 dropdown-toggle dropdown-toggle-none" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="./images/notification-icon.svg" alt="icon" />
+                  </button>
+                  <div class="dropdown-menu mt-2 border-0 shadow-sm dropdown-menu-notification p-0 rounded-0">
+                    <div class="dropdown-menu-notification-header py-3 py-md-4 px-3">
+                      <h5 class="mb-3">Notifications</h5>
+                      <div class="d-flex align-items-center">
+                        <button type="button" data-filter="all" class="btn btn-grad active d-inline-flex align-items-center border-0">All</button>
+                        <button type="button" data-filter="unread" class="btn btn-white ms-3 ml- d-inline-flex align-items-center border-0">Unread</button>
+                      </div>
+                    </div>
+                    <ul class="list-unstyled m-0">
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="btn btn-grad border-0"><img src="./images/notification-icon.svg" alt="icon" /></span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item unread" href="#">
+                          <span class="btn btn-grad border-0"><img src="./images/notification-icon.svg" alt="icon" /></span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="btn btn-grad border-0"><img src="./images/notification-icon.svg" alt="icon" /></span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item unread" href="#">
+                          <span class="btn btn-grad border-0"><img src="./images/notification-icon.svg" alt="icon" /></span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="btn btn-grad border-0"><img src="./images/notification-icon.svg" alt="icon" /></span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item unread" href="#">
+                          <span class="btn btn-grad border-0"><img src="./images/notification-icon.svg" alt="icon" /></span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="btn btn-grad border-0"><img src="./images/notification-icon.svg" alt="icon" /></span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item unread" href="#">
+                          <span class="btn btn-grad border-0"><img src="./images/notification-icon.svg" alt="icon" /></span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="btn btn-grad border-0"><img src="./images/notification-icon.svg" alt="icon" /></span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item unread" href="#">
+                          <span class="btn btn-grad border-0"><img src="./images/notification-icon.svg" alt="icon" /></span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="btn btn-grad border-0"><img src="./images/notification-icon.svg" alt="icon" /></span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item unread" href="#">
+                          <span class="btn btn-grad border-0"><img src="./images/notification-icon.svg" alt="icon" /></span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          <span class="btn btn-grad border-0"><img src="./images/notification-icon.svg" alt="icon" /></span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item unread" href="#">
+                          <span class="btn btn-grad border-0"><img src="./images/notification-icon.svg" alt="icon" /></span>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, 
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="dropdown">
+                  <button class="btn p-0 border-0 username dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     <img src="./images/user-pic.svg" alt="icon" />
                     <span class="d-none d-md-inline-block">janedoe</span>
-                </a>
+                  </button>
+                  <div class="dropdown-menu dropdown-menu-end  dropdown-menu-user mt-2 border-0 shadow-sm p-0 rounded-0">
+                    <div class="d-flex align-items-center p-3">
+                      <img src="images/profile-pic-xl.png" width="50" alt="image" />
+                      <h6 class="mb-0 ms-2 ps-1">janedoe Bond <small>janedoe@alkye.com</small></h6>
+                    </div>
+                    <ul class="list-unstyled m-0">
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          Profile
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item unread" href="#">
+                          Setting
+                        </a>
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="#">
+                          Logout
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
                 <button class="btn d-md-none border-0 ms-2 btn-menu p-0">
                   <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
@@ -50,15 +175,29 @@
       <img src="./images/tl-circles.svg" class="tl-circle" alt="tl circles" />
       <img src="./images/ml-circles.svg" class="ml-circle" alt="ml circles" />
 
-      <div class="navigation-menu d-flex align-items-center justify-content-center py-40">
-        <ul>
-          <li><a class="active" href="#">Dashboard</a></li>
-          <li><a href="#">Outfit Builder</a></li>
-          <li><a href="#">Community</a></li>
-          <li><a href="#">Try On</a></li>
-          <li><a href="#">Book A Stylist</a></li>
-          <li><a href="#">Latest Challenges</a></li>
-        </ul>
+      <div class="navigation-menu d-flex flex-column align-items-center justify-content-center py-40">
+        <div class="my-auto">
+
+          <ul>
+            <li><a class="active" href="#">Dashboard</a></li>
+            <li><a href="#">Outfit Builder</a></li>
+            <li><a href="#">Community</a></li>
+            <li><a href="#">Try On</a></li>
+            <li><a href="#">Book A Stylist</a></li>
+            <li><a href="#">Latest Challenges</a></li>
+          </ul>
+          
+          <ul class="d-md-none mt-4">
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Setting</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </div>
+
+        <div class="dropdown-menu-user d-flex align-items-center mt-3 d-md-none">
+          <img src="images/profile-pic-xl.png" width="50" alt="image" />
+          <h6 class="mb-0 ms-2 ps-1">janedoe Bond <small>janedoe@alkye.com</small></h6>
+        </div>
       </div>
       <!-- /.navigation-menu -->
 

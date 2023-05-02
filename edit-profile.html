@@ -49,22 +49,20 @@
 
       <img src="./images/tl-circles.svg" class="tl-circle" alt="tl circles" />
       <img src="./images/ml-circles.svg" class="ml-circle" alt="ml circles" />
-
-      <div class="navigation-menu d-flex align-items-center justify-content-center py-40">
-        <ul>
-          <li><a class="active" href="#">Dashboard</a></li>
-          <li><a href="#">Outfit Builder</a></li>
-          <li><a href="#">Community</a></li>
-          <li><a href="#">Try On</a></li>
-          <li><a href="#">Book A Stylist</a></li>
-          <li><a href="#">Latest Challenges</a></li>
-        </ul>
-      </div>
-      <!-- /.navigation-menu -->
-
+      <div class="mb-40"></div>
       <main class="page-dash z1">
         <div class="container">
-            <h1 class="h-line mb-0">Edit <em>Profile</em></h1>
+            <h1 class="h-line mb-3">Settings</h1>
+
+            <div class="navigation-menu d-flex align-items-center justify-content-center mb-40">
+                <ul>
+                    <li><a class="active" href="#">Edit Profile</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Bookings</a></li>
+                    <li><a href="#">Subscription</a></li>
+                </ul>
+            </div>
+            <!-- /.navigation-menu -->
 
             <div class="pt-3 py-40">
                 <div class="row mb-40 text-center justify-content-center">
@@ -78,7 +76,9 @@
                             <!-- /.profile-user-left -->
                         </div>
 
-                        <label class="btn btn-grad m-2 px-md-4 d-inline-flex align-items-center border-0 ls-3 text-uppercase"><input type="file" hidden /><span>Upload profile picture</span> <i class="fa-solid ms-2 fa-chevron-right"></i></label>
+                        <button data-bs-toggle="modal" data-bs-target="#addNewModal" class="btn btn-grad m-2 px-md-4 d-inline-flex align-items-center border-0 ls-3 text-uppercase">
+                            <input type="file" hidden /><span>Upload profile picture</span> <i class="fa-solid ms-1 fa-camera"></i>
+                        </button>
                     </div>
                 </div>
 
@@ -104,8 +104,14 @@
                                 <div class="col-sm-6 mb-3">
                                     <label>Email</label>
                                     <div class="br-grad">
-                                        <input type="email" name="email" required class="form-control rounded-0" placeholder="Enter your email" value="example@gmail.com" />
+                                        <input type="email" name="email" readonly class="form-control rounded-0" placeholder="Enter your email" value="example@gmail.com" />
                                     </div>
+                                </div>
+                                <!-- /.mb-3 -->
+                                <div class="col-sm-6 mt-auto mb-3">
+                                    <a href="#" class="btn btn-grad px-md-4 d-inline-flex align-items-center border-0 ls-3 text-uppercase">
+                                        <span>Change Password</span> <i class="fa-solid ms-2 fa-chevron-right"></i>
+                                    </a>
                                 </div>
                                 <!-- /.mb-3 -->
                             </div>
@@ -166,17 +172,19 @@
                                   <label class="mb-2">Liked Brands</label>
                                   <div class="row gx-0">
                                     <div class="col-3 mb-3">
-                                      <div class="item-circle active">
-                                        <span class="item-span"><span><span class="m-auto"><img src="images/brand-1.svg" alt="logo" /></span></span></span>
-                                        <strong>Nike</strong>
-                                      </div>
+                                        <label class="item-circle active">
+                                            <input type="checkbox" hidden checked />
+                                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-1.svg" alt="logo" /></span></span></span>
+                                            <strong>Nike</strong>
+                                        </label>
                                     </div>
                                     <!-- /.col-3 mb-3 -->
                                     <div class="col-3 mb-3">
-                                        <div class="item-circle active">
-                                          <span class="item-span"><span><span class="m-auto"><img src="images/brand-2.svg" alt="logo" /></span></span></span>
-                                          <strong>Louis Vuitton</strong>
-                                        </div>
+                                        <label class="item-circle active">
+                                            <input type="checkbox" hidden checked />
+                                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-2.svg" alt="logo" /></span></span></span>
+                                            <strong>Louis Vuitton</strong>
+                                        </label>
                                     </div>
                                     <!-- /.col-3 mb-3 -->
                                     <div class="col-3 mb-3">
@@ -193,24 +201,26 @@
                                   <label class="mb-2">Disliked Brands</label>
                                   <div class="row gx-0">
                                     <div class="col-3 mb-3">
-                                      <div class="item-circle active">
-                                        <span class="item-span"><span><span class="m-auto"><img src="images/brand-1.svg" alt="logo" /></span></span></span>
-                                        <strong>Nike</strong>
-                                      </div>
+                                        <label class="item-circle active">
+                                            <input type="checkbox" hidden checked />
+                                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-2.svg" alt="logo" /></span></span></span>
+                                            <strong>Louis Vuitton</strong>
+                                        </label>
                                     </div>
                                     <!-- /.col-3 mb-3 -->
                                     <div class="col-3 mb-3">
-                                        <div class="item-circle active">
-                                          <span class="item-span"><span><span class="m-auto"><img src="images/brand-2.svg" alt="logo" /></span></span></span>
-                                          <strong>Louis Vuitton</strong>
-                                        </div>
+                                        <label class="item-circle active">
+                                            <input type="checkbox" hidden checked />
+                                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-2.svg" alt="logo" /></span></span></span>
+                                            <strong>Louis Vuitton</strong>
+                                        </label>
                                     </div>
                                     <!-- /.col-3 mb-3 -->
                                     <div class="col-3 mb-3">
-                                        <div class="item-circle active">
-                                          <span class="item-span"><span><span class="m-auto"><img src="images/brand-3.svg" alt="logo" /></span></span></span>
-                                          <strong>Hermes</strong>
-                                        </div>
+                                      <button type="button" class="btn border-0 p-0 item-circle active" data-bs-toggle="modal" data-bs-target="#disLikedBrandModal">
+                                        <span class="item-span"><span><span class="m-auto"><i class="fa-solid fa-2x fa-plus"></i></span></span></span>
+                                        <strong>Add New</strong>
+                                      </button>
                                     </div>
                                     <!-- /.col-3 mb-3 -->
                                   </div>
@@ -365,11 +375,11 @@
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                     </svg>
                 </button>
-                <input type="text" class="form-control border-0 bg-transparent ps-0" placeholder="Search brands" aria-describedby="button-addon1">
+                <input type="text" data-search="like-brands" class="form-control input-search border-0 bg-transparent ps-0" placeholder="Search brands" aria-describedby="button-addon1">
               </div>
               <!-- /.search -->
               <section>
-                  <div class="row gx-0 justify-content-between">
+                  <div class="row gx-0 like-brands-list-items justify-content-between">
                     <div class="col-3 mb-3">
                         <label class="item-circle active">
                             <input type="checkbox" hidden checked />
@@ -501,12 +511,170 @@
                   </div>
                   <!-- /.row -->
               </section>
+              <button type="submit" class="btn mt-3 btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Update like brands</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Modal brand -->
+      <div class="modal modal-theme fade" id="disLikedBrandModal" tabindex="-1" aria-labelledby="disLikedBrandModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content rounded-0 border-0">
+            <div class="modal-header py-2 border-0 rounded-0">
+              <p class="mb-0">Choose 3 dislike brands that you like.</p>
+              <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-3">
+              <div class="input-group input-group-search mb-4">
+                <button class="btn border-0" type="button" id="button-addon1">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                    </svg>
+                </button>
+                <input type="text" data-search="disLike-brands" class="form-control input-search border-0 bg-transparent ps-0" placeholder="Search brands" aria-describedby="button-addon1">
+              </div>
+              <!-- /.search -->
+              <section>
+                  <div class="row gx-0 disLike-brands-list-items justify-content-between">
+                    <div class="col-3 mb-3">
+                        <label class="item-circle active">
+                            <input type="checkbox" hidden checked />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-1.svg" alt="logo" /></span></span></span>
+                            <strong>Nike</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle">
+                            <input type="checkbox" hidden checked />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-2.svg" alt="logo" /></span></span></span>
+                            <strong>Louis Vuitton</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle active">
+                            <input type="checkbox" hidden checked />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-3.svg" alt="logo" /></span></span></span>
+                            <strong>Hermes</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle">
+                            <input type="checkbox" hidden />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-4.svg" alt="logo" /></span></span></span>
+                            <strong>Gucci</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle">
+                            <input type="checkbox" hidden />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-1.svg" alt="logo" /></span></span></span>
+                            <strong>Nike</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle">
+                            <input type="checkbox" hidden />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-2.svg" alt="logo" /></span></span></span>
+                            <strong>Louis Vuitton</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle">
+                            <input type="checkbox" hidden />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-3.svg" alt="logo" /></span></span></span>
+                            <strong>Hermes</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle">
+                            <input type="checkbox" hidden />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-4.svg" alt="logo" /></span></span></span>
+                            <strong>Gucci</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle">
+                            <input type="checkbox" hidden />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-1.svg" alt="logo" /></span></span></span>
+                            <strong>Nike</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle">
+                            <input type="checkbox" hidden />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-2.svg" alt="logo" /></span></span></span>
+                            <strong>Louis Vuitton</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle">
+                            <input type="checkbox" hidden />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-3.svg" alt="logo" /></span></span></span>
+                            <strong>Hermes</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle">
+                            <input type="checkbox" hidden />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-4.svg" alt="logo" /></span></span></span>
+                            <strong>Gucci</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle">
+                            <input type="checkbox" hidden />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-1.svg" alt="logo" /></span></span></span>
+                            <strong>Nike</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle">
+                            <input type="checkbox" hidden />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-2.svg" alt="logo" /></span></span></span>
+                            <strong>Louis Vuitton</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle">
+                            <input type="checkbox" hidden />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-3.svg" alt="logo" /></span></span></span>
+                            <strong>Hermes</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                    <div class="col-3 mb-3">
+                        <label class="item-circle">
+                            <input type="checkbox" hidden />
+                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-4.svg" alt="logo" /></span></span></span>
+                            <strong>Gucci</strong>
+                        </label>
+                    </div>
+                    <!-- /.col-3 mb-3 -->
+                  </div>
+                  <!-- /.row -->
+              </section>
+              <button type="submit" class="btn mt-3 btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Update dislike brands</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal music -->
       <div class="modal modal-theme fade" id="musicModal" tabindex="-1" aria-labelledby="musicModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content rounded-0 border-0">
@@ -521,11 +689,11 @@
                         <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                     </svg>
                 </button>
-                <input type="text" class="form-control border-0 bg-transparent ps-0" placeholder="Search brands" aria-describedby="button-addon1">
+                <input type="text" data-search="music" class="form-control input-search border-0 bg-transparent ps-0" placeholder="Search brands" aria-describedby="button-addon1">
               </div>
               <!-- /.search -->
               <section>
-                <div class="row gx-0 justify-content-between">
+                <div class="row gx-0 music-list-items justify-content-between">
                   <div class="col-3 mb-3">
                       <label class="item-circle">
                           <input type="checkbox" hidden />
@@ -725,10 +893,96 @@
                 </div>
                   <!-- /.row -->
               </section>
+              
+              <button type="submit" class="btn mt-3 btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Update music</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
             </div>
           </div>
         </div>
       </div>
+
+
+      <!-- addNew Modal -->
+      <div class="modal modal-theme fade" id="addNewModal" tabindex="-1" aria-labelledby="addNewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header py-2 border-0 rounded-0">
+                <p class="mb-0">Upload Profile Picture</p>
+                <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-3">
+                <ul class="list-unstyled modal-list">
+                    <li class="mb-2">
+                      <button data-bs-toggle="modal" data-bs-target="#uploadModal" class="d-flex w-100 btn button-link align-items-center">
+                          <!-- <input type="file" hidden /> -->
+                          <span>Upload Photo</span>
+                          <i class="fa-solid ms-auto fa-chevron-right"></i>
+                        </button>
+                    </li>
+                    <li class="mb-2">
+                        <button id="allow" disabled data-bs-toggle="modal" data-bs-target="#takePhotoModal" class="d-flex w-100 btn button-link align-items-center">
+                            <span>Take Photo</span>
+                            <i class="fa-solid ms-auto fa-chevron-right"></i>
+                        </button>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Upload pic Modal -->
+      <div class="modal modal-theme fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header py-2 border-0 rounded-0">
+                <p class="mb-0">Upload Photo</p>
+                <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-3">
+                <div class="br-grad mb-3">
+                  <label class="upload-box m-0 d-flex bg-white">
+                    <input type="file" accept="image/*" hidden />
+                    <div class="m-auto d-block d-flex text-center align-items-center flex-column">
+                      <img src="images/upload-svg.svg" alt="icon" />
+                      <h6><u>Click to upload</u></h6>
+                      <p class="mb-0"><small>Maximum file size 10 MB in .png, .jpg, .hiec</small></p>
+                    </div>
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Next</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+      <!-- Take Photo Modal -->
+      <div class="modal modal-theme fade" id="takePhotoModal" tabindex="-1" aria-labelledby="takePhotoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header py-2 border-0 rounded-0">
+                <p class="mb-0">Take Photo</p>
+                <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-3">
+                <div class="row">
+                    <div class="col-sm-6 mb-sm-0 mb-3">
+                        <video id="videoPhoto" class="w-100 mb-3 d-block"></video>
+                        <button id="button" type="button" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Take Photo</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                    </div>
+                    <div class="col-sm-6">
+                        <canvas id="canvasPhoto" class="w-100 mb-3 d-none"></canvas>
+                        <div id="take-photo" style="display: none;">
+                            <img src="" class="take-photo img-fluid mb-3" alt="take-photo" />
+                            <a href="#" download="true" id="download-photo" class="btn btn-grad btn-sm d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Download</span> <i class="fa-solid ms-2 fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
 
       <footer class="footer br-grad">
         <div class="pb-4 pt-5 bg-card">

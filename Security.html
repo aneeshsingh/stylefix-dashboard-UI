@@ -49,49 +49,93 @@
 
       <img src="./images/tl-circles.svg" class="tl-circle" alt="tl circles" />
       <img src="./images/ml-circles.svg" class="ml-circle" alt="ml circles" />
-
-      <div class="navigation-menu d-flex align-items-center justify-content-center py-40">
-        <ul>
-          <li><a class="active" href="#">Dashboard</a></li>
-          <li><a href="#">Outfit Builder</a></li>
-          <li><a href="#">Community</a></li>
-          <li><a href="#">Try On</a></li>
-          <li><a href="#">Book A Stylist</a></li>
-          <li><a href="#">Latest Challenges</a></li>
-        </ul>
-      </div>
-      <!-- /.navigation-menu -->
+      <div class="mb-40"></div>
 
       <main class="page-dash z1">
         <div class="container">
-            <h1 class="h-line mb-0">Security</h1>
+            <h1 class="h-line mb-3">Settings</h1>
 
-            <a href="#" class="btn-link mt-2 btn-back"><i class="fa-solid fa-arrow-left me-2"></i> Back</a>
+            <a href="#" class="btn-link mt-2 mb-1 btn-back"><i class="fa-solid fa-arrow-left me-2"></i> Back</a>
+
+            <div class="navigation-menu d-flex align-items-center justify-content-center mb-3">
+                <ul>
+                    <li><a href="#">Edit Profile</a></li>
+                    <li><a class="active" href="#">Security</a></li>
+                    <li><a href="#">Bookings</a></li>
+                    <li><a href="#">Subscription</a></li>
+                </ul>
+            </div>
+            <!-- /.navigation-menu -->
 
             <div class="py-40">
                 
-                <div class="row justify-content-center">
+                <div class="row justify-content-around">
+                    <div class="col-md-6 col-lg-5 col-xl-4 mb-md-0 mb-4">
+                        <h3 class="mb-3"><small>Change Password</small></h3>
+                        
+                        <form action="/" class="form-validate mb-4">
+                            <div class="mb-3">
+                                <label>Current Password</label>
+                                <div class="br-grad input-group-password">
+                                  <input type="password" name="current-password" required class="form-control border-0" placeholder="Enter your current password" />
+                                  <button class="btn bg-white border-0 btn-reset" type="button" id="button-addon2">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <i class="fa-solid fa-eye-slash" style="display: none;"></i>
+                                  </button>
+                                </div>
+                            </div>
+                            <!-- /.mb-3 -->
+                            <div class="mb-3">
+                                <label>New Password</label>
+                                <div class="br-grad input-group-password">
+                                  <input type="password" name="new-password" required class="form-control border-0" placeholder="Enter your new password" />
+                                  <button class="btn bg-white border-0 btn-reset" type="button" id="button-addon2">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <i class="fa-solid fa-eye-slash" style="display: none;"></i>
+                                  </button>
+                                </div>
+                            </div>
+                            <!-- /.mb-3 -->
+                            <div class="mb-3">
+                                <label>Confirm Password</label>
+                                <div class="br-grad input-group-password">
+                                  <input type="password" name="confirm-password" required class="form-control border-0" placeholder="Confirm your new password" />
+                                  <button class="btn bg-white border-0 btn-reset" type="button" id="button-addon2">
+                                    <i class="fa-solid fa-eye"></i>
+                                    <i class="fa-solid fa-eye-slash" style="display: none;"></i>
+                                  </button>
+                                </div>
+                            </div>
+                            <!-- /.mb-3 -->
+                            <button type="submit" data-bs-toggle="modal" data-bs-target="#verifyModal" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Update</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                        </form>
+                    </div>
                     <div class="col-md-6 col-lg-5 col-xl-4">
-                        <ul class="list-unstyled">
-                            <li class="mb-2">
-                                <a href="#" class="d-flex btn button-link align-items-center">
-                                    <span>Last Login</span>
-                                    <i class="fa-solid ms-auto fa-chevron-right"></i>
-                                </a>
+                        <h3 class="mb-3"><small>Last Login</small></h3>
+
+                        <ul class="list-unstyled list-info">
+                            <li class="mb-2 border-bottom px-2">
+                                Location <small class="d-block">18, Jan 2022</small>
                             </li>
-                            <li class="mb-2">
-                                <a href="#" class="d-flex btn button-link align-items-center">
-                                    <span>Password</span>
-                                    <i class="fa-solid ms-auto fa-chevron-right"></i>
-                                </a>
+                            <li class="mb-2 border-bottom px-2">
+                                Location <small class="d-block">18, Jan 2022</small>
+                            </li>
+                            <li class="mb-2 border-bottom px-2">
+                                Location <small class="d-block">18, Jan 2022</small>
+                            </li>
+                            <li class="mb-2 border-bottom px-2">
+                                Location <small class="d-block">18, Jan 2022</small>
+                            </li>
+                            <li class="mb-2 border-bottom px-2">
+                                Location <small class="d-block">18, Jan 2022</small>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <!-- /.py-40 -->
-          </div>
-          <!-- /.container -->
+        </div>
+        <!-- /.container -->
 
         <div class="pt-0 py-40">
             <div class="contact-banner text-white py-4 text-center">
@@ -106,493 +150,47 @@
         </div>
       </main>
 
+      
 
-        <!-- Modal -->
-        <div class="modal modal-theme fade" id="DressSizeModal" tabindex="-1" aria-labelledby="DressSizeModalLabel" aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content rounded-0 border-0">
-                <div class="modal-header py-2 border-0 rounded-0">
-                  <p class="mb-0">Size Chart</p>
-                  <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body p-3">
-                    <div class="table-responisve text-center table-theme">
-                          <table class="table mb-0">
-                              <thead>
-                                  <tr>
-                                      <th>International</th>
-                                      <th>US Size</th>
-                                      <th>UK Size</th>
-                                      <th>EU Size</th>
-                                  </tr>
-                              </thead>
-                              <tbody>
-                                  <tr>
-                                      <td>XXS</td>
-                                      <td>00</td>
-                                      <td>2</td>
-                                      <td>30</td>
-                                  </tr>
-                                  <tr>
-                                      <td>XS</td>
-                                      <td>0</td>
-                                      <td>4</td>
-                                      <td>32</td>
-                                  </tr>
-                                  <tr>
-                                      <td>XS</td>
-                                      <td>2</td>
-                                      <td>6</td>
-                                      <td>34</td>
-                                  </tr>
-                                  <tr>
-                                      <td>S</td>
-                                      <td>4</td>
-                                      <td>8</td>
-                                      <td>36</td>
-                                  </tr>
-                                  <tr>
-                                      <td>S</td>
-                                      <td>6</td>
-                                      <td>10</td>
-                                      <td>38</td>
-                                  </tr>
-                                  <tr>
-                                      <td>M</td>
-                                      <td>8</td>
-                                      <td>12</td>
-                                      <td>40</td>
-                                  </tr>
-                                  <tr>
-                                      <td>M</td>
-                                      <td>10</td>
-                                      <td>14</td>
-                                      <td>42</td>
-                                  </tr>
-                                  <tr>
-                                      <td>L</td>
-                                      <td>12</td>
-                                      <td>16</td>
-                                      <td>44</td>
-                                  </tr>
-                                  <tr>
-                                      <td>L</td>
-                                      <td>14</td>
-                                      <td>18</td>
-                                      <td>46</td>
-                                  </tr>
-                                  <tr>
-                                      <td>XL</td>
-                                      <td>16</td>
-                                      <td>20</td>
-                                      <td>48</td>
-                                  </tr>
-                                  <tr>
-                                      <td>XL</td>
-                                      <td>18</td>
-                                      <td>22</td>
-                                      <td>50</td>
-                                  </tr>
-                                  <tr>
-                                      <td>XXL</td>
-                                      <td>20</td>
-                                      <td>24</td>
-                                      <td>52</td>
-                                  </tr>
-                                  <tr>
-                                      <td>XXL</td>
-                                      <td>22</td>
-                                      <td>26</td>
-                                      <td>54</td>
-                                  </tr>
-                              </tbody>
-                          </table>
+        <!-- Verify Modal -->
+        <div class="modal modal-theme fade" id="verifyModal" tabindex="-1" aria-labelledby="verifyModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content rounded-0 border-0">
+                    <div class="modal-header py-2 border-0 rounded-0">
+                        <p class="mb-0">Verify Identity</p>
+                        <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body p-3">
+                        <form action="/" class="form-validate">
+                            <div class="mb-3">
+                                <label>Enter The Code Recieved In The Email</label>
+                                <div class="br-grad">
+                                    <input type="password" name="verify" required class="form-control rounded-0" placeholder="Enter your verify code" />
+                                </div>
+                            </div>
+                            <!-- /.mb-3 -->
+                            <button type="submit" data-bs-toggle="modal" data-bs-target="#successModal" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Sumbit</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                        </form>
                     </div>
                 </div>
-              </div>
-          </div>
-      </div>
-
-
-      <!-- Modal brand -->
-      <div class="modal modal-theme fade" id="likedBrandModal" tabindex="-1" aria-labelledby="likedBrandModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content rounded-0 border-0">
-            <div class="modal-header py-2 border-0 rounded-0">
-              <p class="mb-0">Choose 3 brands that you like.</p>
-              <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body p-3">
-              <div class="input-group input-group-search mb-4">
-                <button class="btn border-0" type="button" id="button-addon1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                    </svg>
-                </button>
-                <input type="text" class="form-control border-0 bg-transparent ps-0" placeholder="Search brands" aria-describedby="button-addon1">
-              </div>
-              <!-- /.search -->
-              <section>
-                  <div class="row gx-0 justify-content-between">
-                    <div class="col-3 mb-3">
-                        <label class="item-circle active">
-                            <input type="checkbox" hidden checked />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-1.svg" alt="logo" /></span></span></span>
-                            <strong>Nike</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle">
-                            <input type="checkbox" hidden />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-2.svg" alt="logo" /></span></span></span>
-                            <strong>Louis Vuitton</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle active">
-                            <input type="checkbox" hidden checked />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-3.svg" alt="logo" /></span></span></span>
-                            <strong>Hermes</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle">
-                            <input type="checkbox" hidden />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-4.svg" alt="logo" /></span></span></span>
-                            <strong>Gucci</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle">
-                            <input type="checkbox" hidden />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-1.svg" alt="logo" /></span></span></span>
-                            <strong>Nike</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle">
-                            <input type="checkbox" hidden />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-2.svg" alt="logo" /></span></span></span>
-                            <strong>Louis Vuitton</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle">
-                            <input type="checkbox" hidden />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-3.svg" alt="logo" /></span></span></span>
-                            <strong>Hermes</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle">
-                            <input type="checkbox" hidden />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-4.svg" alt="logo" /></span></span></span>
-                            <strong>Gucci</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle">
-                            <input type="checkbox" hidden />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-1.svg" alt="logo" /></span></span></span>
-                            <strong>Nike</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle">
-                            <input type="checkbox" hidden />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-2.svg" alt="logo" /></span></span></span>
-                            <strong>Louis Vuitton</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle">
-                            <input type="checkbox" hidden />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-3.svg" alt="logo" /></span></span></span>
-                            <strong>Hermes</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle">
-                            <input type="checkbox" hidden />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-4.svg" alt="logo" /></span></span></span>
-                            <strong>Gucci</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle">
-                            <input type="checkbox" hidden />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-1.svg" alt="logo" /></span></span></span>
-                            <strong>Nike</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle">
-                            <input type="checkbox" hidden />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-2.svg" alt="logo" /></span></span></span>
-                            <strong>Louis Vuitton</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle">
-                            <input type="checkbox" hidden />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-3.svg" alt="logo" /></span></span></span>
-                            <strong>Hermes</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                    <div class="col-3 mb-3">
-                        <label class="item-circle">
-                            <input type="checkbox" hidden />
-                            <span class="item-span"><span><span class="m-auto"><img src="images/brand-4.svg" alt="logo" /></span></span></span>
-                            <strong>Gucci</strong>
-                        </label>
-                    </div>
-                    <!-- /.col-3 mb-3 -->
-                  </div>
-                  <!-- /.row -->
-              </section>
-            </div>
-          </div>
         </div>
-      </div>
 
-      <!-- Modal brand -->
-      <div class="modal modal-theme fade" id="musicModal" tabindex="-1" aria-labelledby="musicModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content rounded-0 border-0">
-            <div class="modal-header py-2 border-0 rounded-0">
-              <p class="mb-0">What kind of music do you like?</p>
-              <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-3">
-              <div class="input-group input-group-search mb-4">
-                <button class="btn border-0" type="button" id="button-addon1">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                    </svg>
-                </button>
-                <input type="text" class="form-control border-0 bg-transparent ps-0" placeholder="Search brands" aria-describedby="button-addon1">
-              </div>
-              <!-- /.search -->
-              <section>
-                <div class="row gx-0 justify-content-between">
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Jazz</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Alternative</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Classical</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Anime</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Blues</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Comedy</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Children</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Indi-pop</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Dance</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">EMD</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Hip-Hop</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Rap</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Disney</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Indian Classical</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Electronic</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Bollywood Music</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">French Pop</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">K-Pop</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Industrial</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Instrumental</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Opera</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Pop</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Bhangra</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">R&B</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Reggae</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Rock</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">Vocal</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
-                  <div class="col-3 mb-3">
-                      <label class="item-circle">
-                          <input type="checkbox" hidden />
-                          <span class="item-span"><span><span class="m-auto">World</span></span></span>
-                      </label>
-                  </div>
-                  <!-- /.col-3 mb-3 -->
+        <!-- Success Modal -->
+        <div class="modal modal-theme fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content rounded-0 border-0">
+                    <div class="modal-header py-2 border-0 rounded-0">
+                        <p class="mb-0">Password Updated</p>
+                        <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body text-center py-4 px-3">
+                        <img src="images/ic-circle-outline.svg" width="75" class="mb-3" alt="ic-circle-outline" />
+                        <p>Your password has been updated.  </p>
+                    </div>
                 </div>
-                  <!-- /.row -->
-              </section>
             </div>
-          </div>
         </div>
-      </div>
 
       <footer class="footer br-grad">
         <div class="pb-4 pt-5 bg-card">

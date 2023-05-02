@@ -65,7 +65,7 @@
 
       <main class="page-dash z1">
         <div class="container">
-            <h1 class="h-line mb-0">Outfit <em>Builder</em></h1>
+            <h1 class="h-line mb-0">Create a <em>Challenge</em></h1>
 
             <div class="py-4">
                 <div class="mb-3 mb-md-4">
@@ -201,7 +201,7 @@
                         </div>
                         <!-- /.mb-4 -->
                         <div class="mb-40">
-                            <button type="button" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase" data-bs-toggle="modal" data-bs-target="#shareModal"><i class="fa-solid me-2 fa-paper-plane"></i> <span>Share With Friends</span></button>
+                            <button type="button" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase" data-bs-toggle="modal" data-bs-target="#shareModal"><i class="fa-solid me-2 fa-paper-plane"></i> <span>Create Post</span></button>
                         </div>
                     </div>
                     <!-- /.col-sm-4 -->
@@ -381,26 +381,57 @@
                               <div class="mb-2">
                                 <label>Title</label>
                                 <div class="br-grad position-relative">
-                                  <input type="text" class="form-control form-control-limit" required name="title" maxlength="60" />
+                                  <input type="text" maxlength="60" required name="title" class="form-control form-control-limit" />
                                   <span class="limit-count"><span class="lc-num">0</span>/60</span>
                                 </div>
                               </div>
                               <div class="mb-3">
                                 <label>Description</label>
                                   <div class="br-grad position-relative">
-                                      <textarea class="form-control form-control-limit rounded-0" maxlength="300" rows="6" name="message" required placeholder=""></textarea>
+                                      <textarea class="form-control form-control-limit rounded-0" rows="6" required name="message" maxlength="300" placeholder=""></textarea>
                                       <span class="limit-count"><span class="lc-num">0</span>/300</span>
                                   </div>
                               </div>
                             </div>
                           </div>
 
-                          <button type="submit" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Create post</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                          <button type="button" data-bs-toggle="modal" data-bs-target="#invitefriendsModal" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Create post</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
                       </form>
                   </div>
                 </div>
             </div>
         </div>
+
+
+        <!-- invitefriends Modal -->
+        <div class="modal modal-theme fade" id="invitefriendsModal" tabindex="-1" aria-labelledby="invitefriendsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-md">
+                <div class="modal-content rounded-0 border-0">
+                  <div class="modal-header py-2 border-0 rounded-0">
+                    <p class="mb-0">Invite Friends To Challenge</p>
+                    <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body p-3">
+                    <div class="mb-3">
+                        <label>Invite your friends to your challenge, <br />select icons below to share </label>
+                        
+                        <div class="socials socials-lg mt-4 justify-content-around d-flex align-items-center">
+                            <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="text-end pt-4">
+                      <button type="button" data-bs-toggle="modal" data-bs-target="#addAnotherNewModal" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Skip</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
 
         <!-- addNew Modal -->
         <div class="modal modal-theme fade" id="addNewModal" tabindex="-1" aria-labelledby="addNewModalLabel" aria-hidden="true">
@@ -437,14 +468,55 @@
                             </a>
                         </li>
                     </ul>
-                    <button type="submit" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Cancel</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                    <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Cancel</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- addNewPost Modal -->
+        <div class="modal modal-theme fade" id="addAnotherNewModal" tabindex="-1" aria-labelledby="addAnotherNewModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+                <div class="modal-content rounded-0 border-0">
+                  <div class="modal-header py-2 border-0 rounded-0">
+                    <p class="mb-0">Do you want to create another post?</p>
+                    <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body p-3">
+                    <ul class="list-unstyled modal-list">
+                        <li class="mb-2">
+                            <button data-bs-toggle="modal" data-bs-target="#uploadModal" class="d-flex w-100 btn button-link align-items-center">
+                                <span>Upload Photo</span>
+                                <i class="fa-solid ms-auto fa-chevron-right"></i>
+                            </button>
+                        </li>
+                        <li class="mb-2">
+                            <button id="allow" disabled data-bs-toggle="modal" data-bs-target="#takePhotoModal" class="d-flex w-100 btn button-link align-items-center">
+                                <span>Take Photo</span>
+                                <i class="fa-solid ms-auto fa-chevron-right"></i>
+                            </button>
+                        </li>
+                        <li class="mb-2">
+                            <button id="scan" disabled data-bs-toggle="modal" data-bs-target="#scanModal" class="d-flex w-100 btn button-link align-items-center">
+                                <span>Scan QR Code</span>
+                                <i class="fa-solid ms-auto fa-chevron-right"></i>
+                            </button>
+                        </li>
+                        <li class="mb-2">
+                            <a href="Search-Online-Brand.html" class="d-flex btn button-link align-items-center">
+                                <span>Search Online Brands</span>
+                                <i class="fa-solid ms-auto fa-chevron-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="Leaderboard.html" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Skip</span> <i class="fa-solid ms-2 fa-chevron-right"></i></a>
                   </div>
                 </div>
             </div>
         </div>
 
 
-        <!-- Upload pic Modal -->
+      <!-- Upload pic Modal -->
       <div class="modal modal-theme fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-md">
             <div class="modal-content rounded-0 border-0">

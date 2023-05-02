@@ -127,8 +127,45 @@ $(document).ready(function() {
                 }
             }
         });
-    }
+    };
 
+
+    // 28/04
+    // Search item
+    $('.input-search').on('keyup', function() {
+      var value = $(this).val().toLowerCase();
+      var data = $(this).data('search');
+      console.log(value , data);
+      $('.'+data +'-list-items div').filter(function() {
+        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+      });
+    });
+
+    //dropdown 
+    $(".dropdown-menu-notification").click(function(e){
+      e.stopPropagation();
+    });
+
+    $('.dropdown-menu-notification-header .btn').click(function(){
+      var filter = $(this).data('filter');
+      console.log(filter);
+      if(filter === 'unread'){
+        $(this).parents('.dropdown').find('.dropdown-item').parent().fadeOut();
+        $(this).parents('.dropdown').find('.dropdown-item.unread').parent().fadeIn();
+      }else{
+        $(this).parents('.dropdown').find('.dropdown-item').parent().fadeOut().delay(300).fadeIn();
+      }
+    })
+
+    $('.form-control-limit').on('input', function() {
+      // Limit the input to a maximum of 20 characters
+      // if ($(this).val().length >= 20) {
+      //   $(this).attr('maxlength', '20');
+      // } else {
+      //   $(this).removeAttr('maxlength');
+      // }
+      $(this).siblings('.limit-count').find('.lc-num').html($(this).val().length);
+    });
 });
 
 if($('.form-validate').length > 0){
@@ -308,7 +345,7 @@ function drop(event) {
 const video = document.querySelector('#videoPhoto');
 const canvas = document.querySelector('#canvasPhoto');
 const button = document.querySelector('#button');
-const allow = document.querySelector('#allow');
+const allow = document.querySelectorAll('#allow');
 const scan = document.querySelector('#scan');
 const downloadLink = document.querySelector('#download-photo');
 const videoScan = document.querySelector('#video');
@@ -319,42 +356,49 @@ if(video){
       .then((stream) => {
         video.srcObject = stream;
         video.play();
-        allow.disabled = false;
+
+        allow.forEach((element) => {
+          element.disabled = false;
+        });
     
         // scane
-        videoScan.srcObject = stream;
-        videoScan.play();
-        scan.disabled = false;
+        videoScan ? videoScan.srcObject = stream : '';
+        videoScan && videoScan.play();
+        videoScan ? videoScan.disabled = false : '';
       })
       .catch((error) => {
         console.error(error);
-        allow.disabled = true;
+        // allow.disabled = true;
+        allow.forEach((element) => {
+          element.disabled = true;
+        });
     
         // scan
         scan.disabled = true;
       });
 }
 
-  if(document.querySelector('.take-photo')){
-      // When the user clicks the button, take a snapshot of the video stream
-      button.addEventListener('click', () => {
-        const context = canvas.getContext('2d');
-        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+  // if(document.querySelector('.take-photo')){
+  //     // When the user clicks the button, take a snapshot of the video stream
+  //     button.addEventListener('click', () => {
+  //       const context = canvas.getContext('2d');
+  //       context.drawImage(video, 0, 0, canvas.width, canvas.height);
         
-        // Convert the canvas to a blob and create a download link
-        canvas.toBlob((blob) => {
-          const dataURL = URL.createObjectURL(blob);
-          if(dataURL){
-              document.getElementById('take-photo').style.display = 'block';
-              const image = document.querySelector('.take-photo');
-              image.src = dataURL;
-          }
-          downloadLink.href = dataURL;
-          downloadLink.download = 'photo.jpg';
-          URL.revokeObjectURL(dataURL);
-        }, 'image/jpeg', 0.95);
-      });
-  }
+  //       // Convert the canvas to a blob and create a download link
+  //       canvas.toBlob((blob) => {
+  //         const dataURL = URL.createObjectURL(blob);
+  //         console.log(dataURL);
+  //         if(dataURL){
+  //             document.getElementById('take-photo').style.display = 'block';
+  //             const image = document.querySelector('.take-photo');
+  //             image.src = dataURL;
+  //         }
+  //         downloadLink.href = dataURL;
+  //         downloadLink.download = 'photo.jpg';
+  //         URL.revokeObjectURL(dataURL);
+  //       }, 'image/jpeg', 0.95);
+  //     });
+  // }
 
 if(document.querySelector('.take-photo')){
     button.addEventListener('click', () => {
@@ -373,9 +417,15 @@ if(document.querySelector('.take-photo')){
             downloadLink.download = 'photo.jpg';
             // downloadLink.click();
             URL.revokeObjectURL(dataURL);
+            
         }, 'image/jpeg', 5);
     });
 }
+
+$('#download-photo').click(function(){
+  $('#uploadModal').modal('show');
+  $('#takePhotoModal').modal('hide');
+})
 
 
 
@@ -431,30 +481,31 @@ var eventsArray = [
 
 document.addEventListener('DOMContentLoaded', function() {
     var calendarEl = document.getElementById('calendar');
-
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-        height: 600,
-        plugins: [ 'dayGrid', 'interaction' ],
+    if(calendarEl){
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+          height: 600,
+          plugins: [ 'dayGrid', 'interaction' ],
+          
+          dateClick: function(info) {
+              alert('Clicked on: ' + info.dateStr);
+            
+            eventsArray.push({
+              date: info.dateStr,
+              title: "test event added from click"
+            });
+            
+            calendar.refetchEvents();
+          },
         
-        dateClick: function(info) {
-            alert('Clicked on: ' + info.dateStr);
-          
-          eventsArray.push({
-            date: info.dateStr,
-            title: "test event added from click"
-          });
-          
-          calendar.refetchEvents();
-        },
-      
-        eventClick: function(info) {
-          alert(info.event.title)
-        },
-      
-        events: function(info, successCallback, failureCallback) {
-          successCallback(eventsArray);
-        }
-    });
-
-    calendar.render();
+          eventClick: function(info) {
+            alert(info.event.title)
+          },
+        
+          events: function(info, successCallback, failureCallback) {
+            successCallback(eventsArray);
+          }
+      });
+  
+      calendar.render();
+    }
   });

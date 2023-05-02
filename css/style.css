@@ -248,7 +248,7 @@ h6{
 	font-family: 'Aktiv Grotesk';
 	font-size: var(--14);
 	font-weight: normal;
-	padding: 8px 15px;
+	padding: 9px 15px;
 	border-radius: 0;
 }
 
@@ -257,7 +257,7 @@ h6{
 	background: var(--btnGrad);
 }
 
-.btn-grad:hover{
+.btn-grad:hover, .btn-grad.active{
 	color: var(--white);
 	background: var(--btnGradHover);
 }
@@ -452,7 +452,7 @@ h6{
 
 .accordion-item{
 	border-radius: 0 !important;
-	margin-bottom: 8px;
+	margin-bottom: 15px;
 
 	--bs-accordion-btn-padding-x: 1rem;
 	--bs-accordion-btn-padding-y: 0.8rem;
@@ -611,6 +611,7 @@ label.error{
 	object-position: center;
 	position: absolute;
 	object-fit: cover;
+	min-height: 130vh;
 	height: 100%;
 	width: 50%;
 	right: 0;
@@ -641,7 +642,7 @@ label.error{
     border-color: var(--gold);
 }
 
-.navbar-dashboard-control a:not(:first-child){
+.navbar-dashboard-control > *:not(:first-child){
 	margin-left: 20px;
 }
 
@@ -804,7 +805,10 @@ label.error{
 }
 
 .modal-completed-content{
+	flex-direction: column;
+	align-items: center;
 	max-width: 270px;
+	display: flex;
 	width: 100%;
 }
 
@@ -1067,7 +1071,7 @@ label.item-circle .item-span:before{
 	background-color: #fff;
 	transition: all cubic-bezier(0.39, 0.575, 0.565, 1) 0.35s;
 }
-.leader-strip:hover > span{
+.leader-strip:hover > span, .leader-strip.active > span{
 	background-color: transparent;
 }
 
@@ -1309,4 +1313,119 @@ label.item-circle .item-span:before{
 
 [disabled]{
 	opacity: 0.5;
+}
+
+.modal-body .item-circle{
+	margin: auto;
+	display: block;
+}
+
+.dropdown-toggle-none:after{
+	display: none;
+}
+
+
+.dropdown-menu-notification{
+	width: 480px;
+}
+
+.dropdown-menu-notification ul{
+	max-height: 380px;
+	overflow: auto;
+}
+
+.dropdown-menu-notification a{
+	white-space: normal;
+	align-items: center;
+	padding-bottom: 8px;
+	font-size: 12px;
+	padding-top: 8px;
+	display: flex;
+}
+.dropdown-menu a:hover{
+	background: var(--bgGrad);
+	color: var(--blue);
+}
+.dropdown-menu-notification li + li a, .dropdown-menu-user li + li a{
+	border-top: 1px solid #E4B781;
+}
+
+.dropdown-menu-notification ul a span{
+	background: var(--btnGrad) !important;
+	position: relative;
+	margin-right: 12px;
+	padding: 8px 0px;
+	min-width: 40px;
+}
+
+.dropdown-menu-notification h5{
+	font-weight: 500;
+	font-size: 18px;
+}
+
+.dropdown-menu-notification ul a span:before{
+	background-color: var(--red);
+	position: absolute;
+	border-radius: 8px;
+	visibility: hidden;
+	opacity: 0;	
+	content: "";
+	height: 8px;
+	right: -2px;
+	width: 8px;
+	top: -2px;
+}
+.dropdown-menu-notification ul a.unread span:before{
+	opacity: 1;
+	visibility: visible;
+}
+
+.dropdown .dropdown-toggle:before{
+	background-color: var(--white);
+	transform: rotate(45deg);
+	position: absolute;
+	margin: auto;
+	height: 12px;
+	width: 12px;
+	content: "";
+	opacity: 0;
+	top: 100%;
+	right: 0;
+	left: 0;
+	margin-top: 5px;
+}
+.dropdown .dropdown-toggle.show:before{
+	opacity: 1;
+}
+
+.dropdown-menu-user h6{
+	font-size: var(--16);
+}
+.dropdown-menu-user h6 small{
+	font-size: 0.8em;
+}
+
+.dropdown-menu-user li a{
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+
+.upload-box{
+	min-height: 280px;
+}
+
+.upload-box h6{
+	margin-top: 8px;
+}
+
+[readonly]{
+	background-color: #dddddd !important;
+	color: #7e858b !important;
+}
+
+.limit-count{
+	font-size: var(--11);
+	position: absolute;
+	right: 3px;
+	bottom: 0;
 }

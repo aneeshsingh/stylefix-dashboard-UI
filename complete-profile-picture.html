@@ -86,12 +86,12 @@
                                 <h3>Step 2</h3>
                                 <section>
                                     <div class="mb-3 text-center">
-                                        <label class="upload-pic d-inline-flex flex-column">
-                                            <input type="file" hidden />
+                                        <div class="upload-pic d-inline-flex flex-column" data-bs-toggle="modal" data-bs-target="#addNewModal">
+                                            <!-- <input type="file" hidden /> -->
                                             <img src="./images/profile-pic.png" alt="pic" />
                                             <p>Add your profile picture</p>
-                                            <span class="btn btn-grad border-0 ls-3">Upload profile picture</span>
-                                        </label>
+                                            <span class="btn btn-grad border-0 ls-3">Upload profile picture <i class="fa-solid ms-1 fa-camera"></i></span>
+                                        </div>
                                     </div>
                                 </section>
                             </div>
@@ -106,111 +106,91 @@
           <!-- /.container -->
       </main>
 
-      <!-- Modal -->
-    <div class="modal modal-theme fade" id="DressSizeModal" tabindex="-1" aria-labelledby="DressSizeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
+
+      <!-- addNew Modal -->
+      <div class="modal modal-theme fade" id="addNewModal" tabindex="-1" aria-labelledby="addNewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
             <div class="modal-content rounded-0 border-0">
               <div class="modal-header py-2 border-0 rounded-0">
-                <p class="mb-0">Size Chart</p>
+                <p class="mb-0">Upload Profile Picture</p>
                 <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body p-3">
-                  <div class="table-responisve text-center table-theme">
-                        <table class="table mb-0">
-                            <thead>
-                                <tr>
-                                    <th>International</th>
-                                    <th>US Size</th>
-                                    <th>UK Size</th>
-                                    <th>EU Size</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>XXS</td>
-                                    <td>00</td>
-                                    <td>2</td>
-                                    <td>30</td>
-                                </tr>
-                                <tr>
-                                    <td>XS</td>
-                                    <td>0</td>
-                                    <td>4</td>
-                                    <td>32</td>
-                                </tr>
-                                <tr>
-                                    <td>XS</td>
-                                    <td>2</td>
-                                    <td>6</td>
-                                    <td>34</td>
-                                </tr>
-                                <tr>
-                                    <td>S</td>
-                                    <td>4</td>
-                                    <td>8</td>
-                                    <td>36</td>
-                                </tr>
-                                <tr>
-                                    <td>S</td>
-                                    <td>6</td>
-                                    <td>10</td>
-                                    <td>38</td>
-                                </tr>
-                                <tr>
-                                    <td>M</td>
-                                    <td>8</td>
-                                    <td>12</td>
-                                    <td>40</td>
-                                </tr>
-                                <tr>
-                                    <td>M</td>
-                                    <td>10</td>
-                                    <td>14</td>
-                                    <td>42</td>
-                                </tr>
-                                <tr>
-                                    <td>L</td>
-                                    <td>12</td>
-                                    <td>16</td>
-                                    <td>44</td>
-                                </tr>
-                                <tr>
-                                    <td>L</td>
-                                    <td>14</td>
-                                    <td>18</td>
-                                    <td>46</td>
-                                </tr>
-                                <tr>
-                                    <td>XL</td>
-                                    <td>16</td>
-                                    <td>20</td>
-                                    <td>48</td>
-                                </tr>
-                                <tr>
-                                    <td>XL</td>
-                                    <td>18</td>
-                                    <td>22</td>
-                                    <td>50</td>
-                                </tr>
-                                <tr>
-                                    <td>XXL</td>
-                                    <td>20</td>
-                                    <td>24</td>
-                                    <td>52</td>
-                                </tr>
-                                <tr>
-                                    <td>XXL</td>
-                                    <td>22</td>
-                                    <td>26</td>
-                                    <td>54</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                  </div>
+                <ul class="list-unstyled modal-list">
+                    <li class="mb-2">
+                      <button data-bs-toggle="modal" data-bs-target="#uploadModal" class="d-flex w-100 btn button-link align-items-center">
+                          <!-- <input type="file" hidden /> -->
+                          <span>Upload Photo</span>
+                          <i class="fa-solid ms-auto fa-chevron-right"></i>
+                        </button>
+                    </li>
+                    <li class="mb-2">
+                        <button id="allow" disabled data-bs-toggle="modal" data-bs-target="#takePhotoModal" class="d-flex w-100 btn button-link align-items-center">
+                            <span>Take Photo</span>
+                            <i class="fa-solid ms-auto fa-chevron-right"></i>
+                        </button>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      <!-- Upload pic Modal -->
+      <div class="modal modal-theme fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header py-2 border-0 rounded-0">
+                <p class="mb-0">Upload Photo</p>
+                <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-3">
+                <div class="br-grad mb-3">
+                  <label class="upload-box m-0 d-flex bg-white">
+                    <input type="file" accept="image/*" hidden />
+                    <div class="m-auto d-block d-flex text-center align-items-center flex-column">
+                      <img src="images/upload-svg.svg" alt="icon" />
+                      <h6><u>Click to upload</u></h6>
+                      <p class="mb-0"><small>Maximum file size 10 MB in .png, .jpg, .hiec</small></p>
+                    </div>
+                  </label>
+                </div>
+
+                <button type="submit" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Next</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+      <!-- Take Photo Modal -->
+      <div class="modal modal-theme fade" id="takePhotoModal" tabindex="-1" aria-labelledby="takePhotoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header py-2 border-0 rounded-0">
+                <p class="mb-0">Take Photo</p>
+                <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-3">
+                <div class="row">
+                    <div class="col-sm-6 mb-sm-0 mb-3">
+                        <video id="videoPhoto" class="w-100 mb-3 d-block"></video>
+                        <button id="button" type="button" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Take Photo</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                    </div>
+                    <div class="col-sm-6">
+                        <canvas id="canvasPhoto" class="w-100 mb-3 d-none"></canvas>
+                        <div id="take-photo" style="display: none;">
+                            <img src="" class="take-photo img-fluid mb-3" alt="take-photo" />
+                            <a href="#" download="true" id="download-photo" class="btn btn-grad btn-sm d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Download</span> <i class="fa-solid ms-2 fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                </div>
               </div>
             </div>
         </div>
     </div>
+
+  
 
       <footer class="footer br-grad">
         <div class="pb-4 pt-5 bg-card">
