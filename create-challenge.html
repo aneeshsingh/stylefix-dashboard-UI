@@ -80,14 +80,32 @@
                               </div>
                           </div>
                           <div class="mb-3">
-                              <label>Challenge Description</label>
+                              <label>Start date <small>(AEST)</small></label>
                               <div class="br-grad">
-                                <textarea class="form-control form-control-limit rounded-0" maxlength="300" rows="6" name="message" required placeholder=""></textarea>
-                                <span class="limit-count"><span class="lc-num">0</span>/300</span>
+                                  <input type="date" name="start-date" required class="form-control required rounded-0" placeholder="Select start date" />
                               </div>
                           </div>
                           <div class="mb-3">
-                            <button type="submit" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Next</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                            <label>Time Duration</label>
+                            <div class="br-grad">
+                                <select class="form-control form-select">
+                                    <option value="">Select time duration</option>
+                                    <option value="5m">5m</option>
+                                    <option value="10m">10m</option>
+                                    <option value="15m">15m</option>
+                                    <option value="20m">20m</option>
+                                    <option value="25m">25m</option>
+                                    <option value="30m">30m</option>
+                                    <option value="35m">35m</option>
+                                    <option value="40m">40m</option>
+                                    <option value="45m">45m</option>
+                                    <option value="50m">50m</option>
+                                    <option value="55m">55m</option>
+                                </select>
+                            </div>
+                          </div>
+                          <div class="mb-3">
+                            <button type="button" data-bs-toggle="modal" data-bs-target="#addNewModal" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Next</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
                           </div>
                         </form>
                     </div>
@@ -99,6 +117,203 @@
           </div>
           <!-- /.container -->
       </main>
+
+      <!-- addNew Modal -->
+      <div class="modal modal-theme fade" id="addNewModal" tabindex="-1" aria-labelledby="addNewModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header py-2 border-0 rounded-0">
+                <p class="mb-0">Add An Item</p>
+                <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-3">
+                <ul class="list-unstyled modal-list">
+                    <li class="mb-2">
+                        <button data-bs-toggle="modal" data-bs-target="#uploadModal" class="d-flex w-100 btn button-link align-items-center">
+                            <span>Upload Photo</span>
+                            <i class="fa-solid ms-auto fa-chevron-right"></i>
+                        </button>
+                    </li>
+                    <li class="mb-2">
+                        <button id="allow" disabled data-bs-toggle="modal" data-bs-target="#takePhotoModal" class="d-flex w-100 btn button-link align-items-center">
+                            <span>Take Photo</span>
+                            <i class="fa-solid ms-auto fa-chevron-right"></i>
+                        </button>
+                    </li>
+                    <li class="mb-2">
+                        <a href="create-an-outfit.html" class="d-flex btn button-link align-items-center">
+                            <span>Create An Outfit</span>
+                            <i class="fa-solid ms-auto fa-chevron-right"></i>
+                        </a>
+                    </li>
+                </ul>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal modal-theme fade" id="shareModal" tabindex="-1" aria-labelledby="shareModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content rounded-0 border-0">
+            <div class="modal-header py-2 border-0 rounded-0">
+              <p class="mb-0">Create A Post</p>
+              <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-3">
+                <form action="/" class="form-validate">
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                          <div class="br-grad h-100">
+                              <label class="d-flex h-100 bg-white flex-column position-relative m-0">
+                                  <!-- <input type="file" required class="required upload-file" name="file" /> -->
+                                  <img src="./images/community-image.png" class="img-fluid m-auto d-block w-100" alt="placeholder" />
+                              </label>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="mb-2">
+                          <label>Title</label>
+                          <div class="br-grad position-relative">
+                            <input type="text" class="form-control form-control-limit" required name="title" maxlength="60" />
+                            <span class="limit-count"><span class="lc-num">0</span>/60</span>
+                          </div>
+                        </div>
+                        <div class="mb-3">
+                          <label>Description</label>
+                            <div class="br-grad position-relative">
+                                <textarea class="form-control form-control-limit rounded-0" required maxlength="300" rows="6" name="message" placeholder=""></textarea>
+                                <span class="limit-count"><span class="lc-num">0</span>/300</span>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button type="button" data-bs-toggle="modal" data-bs-target="#invitefriendsModal" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Create post</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                </form>
+            </div>
+          </div>
+      </div>
+  </div>
+
+
+    <!-- Upload pic Modal -->
+    <div class="modal modal-theme fade" id="uploadModal" tabindex="-1" aria-labelledby="uploadModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-md">
+          <div class="modal-content rounded-0 border-0">
+            <div class="modal-header py-2 border-0 rounded-0">
+              <p class="mb-0">Upload Photo</p>
+              <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-3">
+              <div class="br-grad mb-3">
+                <label class="upload-box m-0 d-flex bg-white">
+                  <input type="file" accept="image/*" hidden />
+                  <div class="m-auto d-block d-flex text-center align-items-center flex-column">
+                    <img src="images/upload-svg.svg" alt="icon" />
+                    <h6><u>Click to upload</u></h6>
+                    <p class="mb-0"><small>Maximum file size 10 MB in .png, .jpg, .hiec</small></p>
+                  </div>
+                </label>
+              </div>
+              
+              <button type="button" data-bs-toggle="modal" data-bs-target="#shareModal" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Next</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+            </div>
+          </div>
+      </div>
+    </div>
+
+      <!-- Take Photo Modal -->
+      <div class="modal modal-theme fade" id="takePhotoModal" tabindex="-1" aria-labelledby="takePhotoModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content rounded-0 border-0">
+                <div class="modal-header py-2 border-0 rounded-0">
+                  <p class="mb-0">Take Photo</p>
+                  <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-3">
+                  <div class="row">
+                      <div class="col-sm-6 mb-sm-0 mb-3">
+                          <video id="videoPhoto" class="w-100 mb-3 d-block"></video>
+                          <button id="button" type="button" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span id="button-text">Take Photo</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                      </div>
+                      <div class="col-sm-6">
+                          <canvas id="canvasPhoto" class="w-100 mb-3 d-none"></canvas>
+                          <div id="take-photo" style="display: none;">
+                              <img src="" class="take-photo img-fluid mb-3" alt="take-photo" />
+                              <a href="#" download="true" id="download-photo" class="btn btn-grad btn-sm d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Download</span> <i class="fa-solid ms-2 fa-chevron-right"></i></a>
+                          </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <!-- invitefriends Modal -->
+      <div class="modal modal-theme fade" id="invitefriendsModal" tabindex="-1" aria-labelledby="invitefriendsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-md">
+            <div class="modal-content rounded-0 border-0">
+              <div class="modal-header py-2 border-0 rounded-0">
+                <p class="mb-0">Invite Friends To Challenge</p>
+                <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body p-3">
+                <div class="mb-3">
+                    <label>Invite your friends to your challenge, <br />select icons below to share </label>
+                    
+                    <div class="socials socials-lg mt-4 justify-content-around d-flex align-items-center">
+                        <a href="#"><i class="fa-regular fa-envelope"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <div class="text-end pt-4">
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#addAnotherNewModal" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Skip</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- addNewPost Modal -->
+    <div class="modal modal-theme fade" id="addAnotherNewModal" tabindex="-1" aria-labelledby="addAnotherNewModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content rounded-0 border-0">
+            <div class="modal-header py-2 border-0 rounded-0">
+              <p class="mb-0">Do you want to create another post?</p>
+              <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-3">
+              <ul class="list-unstyled modal-list">
+                <li class="mb-2">
+                    <button data-bs-toggle="modal" data-bs-target="#uploadModal" class="d-flex w-100 btn button-link align-items-center">
+                        <span>Upload Photo</span>
+                        <i class="fa-solid ms-auto fa-chevron-right"></i>
+                    </button>
+                </li>
+                <li class="mb-2">
+                    <button id="allow" disabled data-bs-toggle="modal" data-bs-target="#takePhotoModal" class="d-flex w-100 btn button-link align-items-center">
+                        <span>Take Photo</span>
+                        <i class="fa-solid ms-auto fa-chevron-right"></i>
+                    </button>
+                </li>
+                <li class="mb-2">
+                    <a href="create-an-outfit.html" class="d-flex btn button-link align-items-center">
+                        <span>Create An Outfit</span>
+                        <i class="fa-solid ms-auto fa-chevron-right"></i>
+                    </a>
+                </li>
+              </ul>
+              <a href="Leaderboard.html" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Skip</span> <i class="fa-solid ms-2 fa-chevron-right"></i></a>
+            </div>
+          </div>
+      </div>
+  </div>
 
       <footer class="footer br-grad">
         <div class="pb-4 pt-5 bg-card">

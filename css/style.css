@@ -1433,3 +1433,18 @@ label.item-circle .item-span:before{
 #canvasPhoto{
 	height: 500px !important;
 }
+
+.owl-card > button.fa-trash-can{
+	top: 5px;
+	z-index: 2;
+	right: 5px;
+	width: 32px;
+	height: 32px;
+	position: absolute;
+	border-radius: 32px;
+}
+
+.br-grad.disabled{
+	opacity: 0.5;
+	pointer-events: none;
+}
