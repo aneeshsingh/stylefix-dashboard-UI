@@ -1457,3 +1457,7 @@ label.item-circle .item-span:before{
 	font-family: 'Aktiv Grotesk';
 	font-weight: 400;
 }
+
+h4 strong{
+	font-weight: 500;
+}
