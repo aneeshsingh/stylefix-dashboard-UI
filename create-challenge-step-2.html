@@ -182,8 +182,7 @@
                         </div>
                       </div>
                     </div>
-
-                    <button type="button" data-bs-toggle="modal" data-bs-target="#invitefriendsModal" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Create post</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+                    <button type="submit" data-bs-toggle="modal" data-bs-target="#invitefriendsModal" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Create post</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
                 </form>
             </div>
           </div>
@@ -200,18 +199,20 @@
               <button type="button" class="btn-close opacity" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-3">
-              <div class="br-grad mb-3">
-                <label class="upload-box m-0 d-flex bg-white">
-                  <input type="file" accept="image/*" hidden />
-                  <div class="m-auto d-block d-flex text-center align-items-center flex-column">
-                    <img src="images/upload-svg.svg" alt="icon" />
-                    <h6><u>Click to upload</u></h6>
-                    <p class="mb-0"><small>Maximum file size 10 MB in .png, .jpg, .hiec</small></p>
-                  </div>
-                </label>
-              </div>
-              
-              <button type="button" data-bs-toggle="modal" data-bs-target="#shareModal" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Next</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+              <form action="/" class="form-validate">
+                <div class="br-grad mb-3">
+                  <label class="upload-box m-0 d-flex bg-white">
+                    <input type="file" name="file-upload" required accept="image/*" />
+                    <div class="m-auto d-block d-flex text-center align-items-center flex-column">
+                      <img src="images/upload-svg.svg" alt="icon" />
+                      <h6><u>Click to upload</u></h6>
+                      <p class="mb-0"><small>Maximum file size 10 MB in .png, .jpg, .hiec</small></p>
+                    </div>
+                  </label>
+                </div>
+                
+                <button type="submit" data-bs-toggle="modal" data-bs-target="#shareModal" class="btn btn-grad d-inline-flex align-items-center border-0 ls-3 text-uppercase"><span>Next</span> <i class="fa-solid ms-2 fa-chevron-right"></i></button>
+              </form>
             </div>
           </div>
       </div>
