@@ -182,22 +182,24 @@ if($('.form-validate').length > 0){
     });
 }
 
-const myModalEl = document.getElementById('uploadModal')
-myModalEl.addEventListener('shown.bs.modal', event => {
-  if($('.form-validate').length > 0){
-    $.validator.setDefaults({
-        submitHandler: function() {
-            alert("submitted!");
-        }
-    });
-    $().ready(function() {
-        // validate the comment form when it is submitted
-        $('[type="submit"]').click(function(){
-            $(this).parents(".form-validate").validate();
-        })
-    });
-  }
-})
+const myModalEl = document.getElementById('uploadModal');
+if(myModalEl){
+  myModalEl.addEventListener('shown.bs.modal', event => {
+    if($('.form-validate').length > 0){
+      $.validator.setDefaults({
+          submitHandler: function() {
+              alert("submitted!");
+          }
+      });
+      $().ready(function() {
+          // validate the comment form when it is submitted
+          $('[type="submit"]').click(function(){
+              $(this).parents(".form-validate").validate();
+          })
+      });
+    }
+  })
+}
 
 
 
